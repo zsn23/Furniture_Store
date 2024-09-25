@@ -17,8 +17,9 @@
   /* Mega Menu styling */
 /* Mega Menu styling */
 .mega-menu {
-  background-color: #ffffff;
+  background-color: #F8F9FA;
 }
+
 
 .menu-items {
   display: flex;
@@ -33,6 +34,9 @@
   position: relative;
   margin: 0 20px;
 }
+/* .menu-items li:hover{
+  background-color: #DFDDDD;
+} */
 
 .menu-items a {
   text-decoration: none;
@@ -41,15 +45,26 @@
   font-weight: 600;
   display: inline-block;
   opacity: 0.7;
-  transition: opacity 0.3s ease, border-bottom 0.3s ease;
+  transition: opacity 0.3s ease, border-bottom 0.3s ease ,font-size 0.3s ease-in-out;
 }
 
 .menu-items a:hover,
 .menu-items .active {
-  color: #000;
-  opacity: 1;
-  border-bottom: 1px solid #000;
-  font-weight: bold;
+  color: #000 !important;
+  opacity: 1 !important;
+  border-bottom: 1px solid #000 !important;
+  font-weight: bold !important;
+  
+}
+.menu-items:focus {
+  color: #000 !important;
+  opacity: 1 !important;
+  border-bottom: 1px solid #000 !important;
+  font-weight: bold !important;
+  
+}
+.menu-items a:hover{
+  font-size: 20px;
 }
 
 .dropdown-content {
@@ -95,6 +110,23 @@
   transform: rotate(180deg); /* Rotate the caret on hover */
 }
 
+
+/* offcanvas styling */
+.accordion-body{
+  background-color:#DDDDDD;
+  width: 140px;
+  border: 1px;
+  border-radius: 1px;
+}
+.offcanvas{
+  background-color: #F8F9FA !important;
+}
+
+.accordion-header{
+  width: 140px;
+}
+
+
 /* Media Queries */
 @media (max-width:769px) {
   .navbar__{
@@ -108,15 +140,47 @@
   }
 }
 
-.menu-items li {
+.menu-items_ li {
   position: relative;
   margin: 10px 0;
 }
 
 @media (min-width: 992px) {
-  .menu-items li {
+  .menu-items_ li {
     margin: 0 20px;
   }
+
+
 }
 
 
+/* footer styling */
+.privacy-policy{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap :10px;
+
+}
+.privacy-policy a{
+  font-size: smaller;
+  color: black;
+  font-weight: 500;
+}
+.copyright p{
+  font-size: small;
+  color: black;
+  font-weight: 500;
+}
+.anchor a{
+  font-size: small;
+  color: black;
+  font-weight: 500;
+}
+/* @media (max-width: 767.9px) {
+  
+ .Online-resources{
+  display: none;
+ }
+} */
+ /* footer styling */

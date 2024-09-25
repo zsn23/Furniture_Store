@@ -5,14 +5,14 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer'
-
+import TopNavbar from './Components/Nabar/TopNavbar'
 
 
 
 const App = () => {
   return (
     <>
-
+      <TopNavbar/>
 
     <Routes>
         <Route path="/" element={<Home />} />
