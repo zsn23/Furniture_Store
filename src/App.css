@@ -1,0 +1,122 @@
+.fontStyling{
+    font-family: "Quicksand", sans-serif;
+}
+
+.fontStyling02 {
+    font-family: "avenirnextregular", "Arial", sans-serif; 
+    font-size: 30px;
+  }
+  @media (max-width: 375px) {
+    .fontStyling02 {
+      font-size: 1.5rem; 
+    }
+  }
+  
+
+  
+  /* Mega Menu styling */
+/* Mega Menu styling */
+.mega-menu {
+  background-color: #ffffff;
+}
+
+.menu-items {
+  display: flex;
+  list-style: none;
+   flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items li {
+  position: relative;
+  margin: 0 20px;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #333;
+  padding: 0px 5px 0px 5px;
+  font-weight: 600;
+  display: inline-block;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, border-bottom 0.3s ease;
+}
+
+.menu-items a:hover,
+.menu-items .active {
+  color: #000;
+  opacity: 1;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px); /* Start position above */
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease; /* Adjusted transform timing */
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Move dropdown to its normal position */
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Caret styling */
+.caret {
+  font-size: 12px;
+  margin-left: 5px;
+  display: inline-block;
+  transition: transform 0.5s ease; /* Adjusted to make it faster */
+}
+
+.dropdown:hover .caret {
+  transform: rotate(180deg); /* Rotate the caret on hover */
+}
+
+/* Media Queries */
+@media (max-width:769px) {
+  .navbar__{
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-items_ {
+    flex-direction: row;
+  }
+}
+
+.menu-items li {
+  position: relative;
+  margin: 10px 0;
+}
+
+@media (min-width: 992px) {
+  .menu-items li {
+    margin: 0 20px;
+  }
+}
+
+
