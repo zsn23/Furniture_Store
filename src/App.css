@@ -252,22 +252,23 @@ font-size: 14px;
 }
 
 
-@media (max-width:405px) {
+@media (max-width:407px) {
   .btn-tranparent{
-    top:-225px !important;
+    top:-233px !important;
+    left:-5px !important;
   }
 }
 
-@media (max-width:400px) {
+/* @media (max-width:400px) {
   .btn-tranparent{
     top:-228px !important;
   }
-}
+} */
 
 
-@media (max-width:364px) {
+@media (max-width:375px) {
   .btn-tranparent{
-    left:-22px !important;
+    top:-229px !important;
   }
 }
 

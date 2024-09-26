@@ -30,6 +30,22 @@ const MegaMenu = () => {
               </div>
             )}
           </li>
+
+
+          <li 
+            className="dropdown"
+            onMouseEnter={() => setFurnitureDropdown(true)}
+            onMouseLeave={() => setFurnitureDropdown(false)}
+          >
+            <Link to="/Customizefurniture">Customize Furniture <i className="bi bi-caret-up-fill caret"></i></Link>
+            {furnitureDropdown && (
+              <div className="dropdown-content">
+                <Link to="/furniture/sofas">Sofas</Link>
+                <Link to="/furniture/beds">Beds</Link>
+                <Link to="/furniture/tables">Tables</Link>
+              </div>
+            )}
+          </li>
           
           <li 
             className="dropdown"
@@ -53,7 +69,7 @@ const MegaMenu = () => {
 
 
             {/* Hamburger Button */}
-            <button className="btn btn-tranparent fs-2 d-md-none" style={{position: 'relative', top:'-203px' , left:'24px'}} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+            <button className="btn btn-tranparent fs-2 d-md-none" style={{position: 'relative', top:'-206px' , left:'24px'}} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
             <i className="fa fa-thin fa-bars" ></i>
             </button>
 
@@ -91,6 +107,31 @@ const MegaMenu = () => {
                         </div>
                     </div>
                 </li>
+
+                <li className="accordion-item">
+    <h2 className="accordion-header" id="headingCustomizeFurniture">
+        <Link 
+            className="accordion-button text-decoration-none" 
+            to="/Customizefurniture" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#collapseCustomizeFurniture"
+            aria-expanded="false" 
+            aria-controls="collapseCustomizeFurniture"
+        >
+            Customize Furniture <i className="bi-fill bi-caret-down-fill caret"></i>
+        </Link>
+    </h2>
+    <div id="collapseCustomizeFurniture" className="accordion-collapse collapse" aria-labelledby="headingCustomizeFurniture" data-bs-parent="#accordionMenu">
+        <div className="accordion-body">
+            <Link to="/furniture/lamps" className='p-2' >Lamps</Link><br />
+            <Link to="/furniture/vases" className='p-2' >Vases</Link><br />
+            <Link to="/furniture/rugs"  className='p-2' >Rugs</Link>
+        </div>
+    </div>
+</li>
+
+
+
                 <li className="accordion-item">
                     <h2 className="accordion-header" id="headingAccessories">
                         <Link 
