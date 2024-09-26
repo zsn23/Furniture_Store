@@ -22,7 +22,6 @@ letter-spacing: 0.20rem;
 
 .hover-underline {
 text-decoration: none; 
-
 }
 
 .hover-underline:hover {
@@ -40,6 +39,12 @@ outline: none;
 color: #000; 
 background-color: transparent !important; 
 }
+
+input.form-control:focus {
+  border-color: black; 
+  box-shadow: none; 
+}
+
 
 .account-dropdown {
 width: 200px; 

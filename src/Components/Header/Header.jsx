@@ -220,7 +220,7 @@ const Header = () => {
     
         {/* Search Bar */}
         <div className="col-12 col-md-4 d-flex justify-content-end">
-          <div className="input-group w-100" >
+          <div className="input-group w-100 searchInput" >
             <input
               type="text"
               placeholder="What can we help you find?"
