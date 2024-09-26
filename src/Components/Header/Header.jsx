@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Drop-down Menu */}
         <div className="col-12 col-md-4 d-flex justify-content-center">
-          <h6>Drop down menu</h6>
+          <h6>Country Options</h6>
         </div>
 
         {/* Search Bar */}
