@@ -359,3 +359,51 @@ font-size: 14px;
   text-decoration: none;
 }
  /* Login page styling ends */
+
+
+ /* CATEGORY  LAYOUT  */
+
+ .grid_{
+  display: flex;
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+ }
+ .grid-items_{
+  position: relative !important;
+  left: 50px !important;
+  width:350px;
+  height: auto;
+  margin: 1rem;
+ }
+ .card_{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 100 !important;
+ }
+ .card_ img{
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: auto;
+  object-fit: cover;
+ }
+.card_{
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+.card_ {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.card_:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+
