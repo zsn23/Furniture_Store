@@ -1,0 +1,52 @@
+/* Adjust the carousel controls */
+.carousel-control-prev_,
+.carousel-control-next_ {
+  position: absolute;
+  top: 170px !important;
+  width: 25px !important;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:769px) {
+    /* Adjust the carousel controls */
+.carousel-control-prev_,
+.carousel-control-next_ {
+    top: 1050px !important
+}
+    
+}
+
+.carousel-control-prev_ {
+  left: 40px !important; /* Set to the very left */
+}
+
+.carousel-control-next_ {
+  right: 40px !important; /* Set to the very right */
+}
+
+/* Adjust the card size */
+.product-card {
+  max-width: 250px; /* Make the card smaller */
+  margin: 0 auto;   /* Center the cards */
+}
+
+/* Adjust carousel content positioning */
+.carousel-inner_ .row {
+  display: flex;
+  justify-content: center; /* Center the product cards */
+  align-items: center;
+}
+
+.carousel-item {
+  text-align: center; /* Make sure content is centered */
+}
+
+/* Optional: Adjust carousel container to ensure full width */
+.product-carousel-container {
+  position: relative;
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="container-fluid mt-4">
+    <div className="container-fluid mt-4" style={{backgroundColor:'#F8F9FA'}}>
       <div className="row align-items-center">
         <div className="col-12 col-md-6 d-flex justify-content-md-start justify-content-center mb-3 mb-md-0">
           <h1 className="fontStyling02 text-center text-md-left">FURNITUREHOP</h1>
@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Drop-down Menu */}
         <div className="col-12 col-md-4 d-flex justify-content-center">
-          <h6>Drop down menu</h6>
+          <h6>Country Options</h6>
         </div>
 
         {/* Search Bar */}
