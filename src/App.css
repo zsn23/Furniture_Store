@@ -11,7 +11,10 @@
       font-size: 1.5rem; 
     }
   }
-  
+  .textBlack{
+    color: black;
+    text-decoration: none;
+  }
 
   
   /* Mega Menu styling */
@@ -184,3 +187,27 @@
  }
 } */
  /* footer styling */
+
+ /* Login page styling starts */
+
+/* Headings Styles */
+.login-box h3, .create-account-box h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.button-login{
+  background-color: #84754E;
+  border-radius: 5px;
+  height: 41px;
+  border: #84754E;
+  color: white;
+}
+
+.checkbox{
+  font-size: small;
+  color: black;
+  font-weight: 500;
+}
+ /* Login page styling ends */
