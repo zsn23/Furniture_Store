@@ -31,7 +31,7 @@ const ProductsInCarousel = () => {
 
                   <div className={`col-12  col-md-4`} key={product.id}>
   <div className="card card_ h-100 shadow-sm product-card border-1" key={product.id}>
-    <Link className="text-dark " to={`/product/${product.id}`}>
+    <Link className="text-dark a_" to={`/product/${product.id}`}>
       <img src={product.image} className="card-img-top border-0" alt={product.name} />
       <div className="card-body py-4 mt-3 text-start">
         <h5 className="card-title a_title ">{product.name}</h5>

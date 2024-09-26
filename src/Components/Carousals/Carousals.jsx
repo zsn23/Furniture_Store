@@ -1,6 +1,6 @@
 // import React from 'react';
 // import carosal_img1 from '../Logo/sept2024_touchscreen.jpg'
-import carosal_img4 from '../Logo/c1 (2).jpeg'
+import carosal_img4 from '../Logo/c1 (2).jpg'
 import ProductsInCarousel from './ProductsInCarousel ';
 
 

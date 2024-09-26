@@ -72,8 +72,11 @@
   position: relative;
 }
 
-a {
+/* a {
   text-decoration: none !important;
+} */
+.a_{
+  text-decoration: none !important;  
 }
 
 .a_title {
