@@ -53,7 +53,7 @@ const MegaMenu = () => {
 
 
             {/* Hamburger Button */}
-            <button className="btn btn-tranparent fs-2 d-md-none" style={{position: 'relative', top:'-50px' , left:'35px'}} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+            <button className="btn btn-tranparent fs-2 d-md-none" style={{position: 'relative', top:'-211px' , left:'24px'}} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
             <i className="fa fa-thin fa-bars" ></i>
             </button>
 
