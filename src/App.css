@@ -1,3 +1,4 @@
+
 .fontStyling {
   font-family: "Quicksand", sans-serif;
 }
@@ -20,6 +21,84 @@
 
 
 /* Mega Menu styling */
+
+/* Header Styling */
+.fontStyling{
+  font-family: 'Arial', sans-serif;  
+  font-size: smaller;
+  letter-spacing: 0.22rem;
+  margin-top: 3px;
+}
+
+.fontStyling02 {
+font-family: 'Arial', sans-serif;  
+letter-spacing: 0.20rem;
+}
+.text-decoration-none {
+  color: inherit;
+}
+
+@media (max-width: 375px) {
+  .fontStyling02 {
+    font-size: 1.5rem; 
+  }
+}
+
+.hover-underline {
+text-decoration: none; 
+
+}
+
+.hover-underline:hover {
+text-decoration: underline;
+text-decoration-thickness: -1px; 
+}
+/* Input focus: Black border when clicked */
+.custom-input:focus {
+border-color: black !important;
+box-shadow: none !important; 
+outline: none;
+}
+
+.dropdown-item {
+color: #000; 
+background-color: transparent !important; 
+}
+
+.account-dropdown {
+width: 200px; 
+padding: 10px;
+border: 1px solid #ddd;
+background-color: white;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-dropdown ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.account-dropdown li {
+margin-bottom: 8px;
+}
+
+.account-dropdown li:last-child {
+margin-bottom: 0;
+}
+
+.account-dropdown .dropdown-item {
+font-size: 14px; 
+}
+
+
+
+
+
+
+
+
+  
 /* Mega Menu styling */
 .mega-menu {
   background-color: #F8F9FA;
@@ -166,6 +245,18 @@
 
 
 }
+@media (max-width:409px) {
+  .btn-tranparent{
+    top:-230px !important;
+  }
+}
+
+@media (max-width:376px) {
+  .btn-tranparent{
+    top:-225px !important;
+  }
+}
+
 
 
 /* footer styling */
@@ -219,7 +310,11 @@
 } */
 /* footer styling */
 
+
+
+
 /* Login page styling starts */
+ /* Login page styling starts */
 
 /* Headings Styles */
 .login-box h3,
@@ -243,25 +338,9 @@
   font-weight: 500;
 }
 
-/* Login page styling ends */
-
-
-
-
-/* order track css starts */
-.contact-details p {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+/* For BLue Linking */
+.textBlack{
+  color: black;
+  text-decoration: none;
 }
-
-.contact-details i {
-  margin-right: 10px; 
-}
-
-.contact-details p {
-  margin-top: 10px; 
-}
-
-
-/* order track css ends */
+ /* Login page styling ends */
