@@ -253,7 +253,7 @@ font-size: 14px;
 
 
 @media (max-width:407px) {
-  .btn-tranparent{
+  .btn-transparent{
     top:-233px !important;
     left:-5px !important;
   }
@@ -267,7 +267,7 @@ font-size: 14px;
 
 
 @media (max-width:375px) {
-  .btn-tranparent{
+  .btn-transparent{
     top:-229px !important;
   }
 }
