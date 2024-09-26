@@ -1,3 +1,27 @@
+
+.fontStyling {
+  font-family: "Quicksand", sans-serif;
+}
+
+.fontStyling02 {
+  font-family: "avenirnextregular", "Arial", sans-serif;
+  font-size: 30px;
+}
+
+@media (max-width: 375px) {
+  .fontStyling02 {
+    font-size: 1.5rem;
+  }
+}
+
+.textBlack {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Mega Menu styling */
+
 /* Header Styling */
 .fontStyling{
   font-family: 'Arial', sans-serif;  
@@ -89,7 +113,7 @@ font-size: 14px;
 .menu-items {
   display: flex;
   list-style: none;
-   flex-direction: row;
+  flex-direction: row;
   justify-content: center;
   padding: 0;
   margin: 0;
@@ -99,6 +123,7 @@ font-size: 14px;
   position: relative;
   margin: 0 20px;
 }
+
 /* .menu-items li:hover{
   background-color: #DFDDDD;
 } */
@@ -110,7 +135,7 @@ font-size: 14px;
   font-weight: 600;
   display: inline-block;
   opacity: 0.7;
-  transition: opacity 0.3s ease, border-bottom 0.3s ease ,font-size 0.3s ease-in-out;
+  transition: opacity 0.3s ease, border-bottom 0.3s ease, font-size 0.3s ease-in-out;
 }
 
 .menu-items a:hover,
@@ -119,16 +144,18 @@ font-size: 14px;
   opacity: 1 !important;
   border-bottom: 1px solid #000 !important;
   font-weight: bold !important;
-  
+
 }
+
 .menu-items:focus {
   color: #000 !important;
   opacity: 1 !important;
   border-bottom: 1px solid #000 !important;
   font-weight: bold !important;
-  
+
 }
-.menu-items a:hover{
+
+.menu-items a:hover {
   font-size: 20px;
 }
 
@@ -141,14 +168,17 @@ font-size: 14px;
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px); /* Start position above */
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease; /* Adjusted transform timing */
+  transform: translateY(-20px);
+  /* Start position above */
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  /* Adjusted transform timing */
 }
 
 .dropdown:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0); /* Move dropdown to its normal position */
+  transform: translateY(0);
+  /* Move dropdown to its normal position */
 }
 
 .dropdown-content a {
@@ -168,33 +198,36 @@ font-size: 14px;
   font-size: 12px;
   margin-left: 5px;
   display: inline-block;
-  transition: transform 0.5s ease; /* Adjusted to make it faster */
+  transition: transform 0.5s ease;
+  /* Adjusted to make it faster */
 }
 
 .dropdown:hover .caret {
-  transform: rotate(180deg); /* Rotate the caret on hover */
+  transform: rotate(180deg);
+  /* Rotate the caret on hover */
 }
 
 
 /* offcanvas styling */
-.accordion-body{
-  background-color:#DDDDDD;
+.accordion-body {
+  background-color: #DDDDDD;
   width: 140px;
   border: 1px;
   border-radius: 1px;
 }
-.offcanvas{
+
+.offcanvas {
   background-color: #F8F9FA !important;
 }
 
-.accordion-header{
+.accordion-header {
   width: 140px;
 }
 
 
 /* Media Queries */
 @media (max-width:769px) {
-  .navbar__{
+  .navbar__ {
     display: none !important;
   }
 }
@@ -232,50 +265,71 @@ font-size: 14px;
 
 
 /* footer styling */
-.privacy-policy{
+.privacy-policy {
   display: flex;
   justify-content: center;
   flex-wrap: wrap-reverse;
-  gap :10px;
+  gap: 10px;
 
 }
-.privacy-policy a{
+
+.privacy-policy a {
   font-size: smaller;
   color: black;
   font-weight: 500;
 }
-.copyright p{
+
+.copyright p {
   font-size: small;
   color: black;
   font-weight: 500;
 }
-.anchor a{
+
+.anchor a {
   font-size: small;
   color: black;
   font-weight: 500;
 }
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensures that the content is centered within the column */
+}
+
+.contact-item i {
+  margin-right: 10px; /* Adds space between the icon and the text */
+}
+
+@media (max-width: 768px) {
+  .contact-item {
+    justify-content: flex-start; /* Align items to the left for smaller screens */
+  }
+}
+
+
 /* @media (max-width: 767.9px) {
   
  .Online-resources{
   display: none;
  }
 } */
- /* footer styling */
+/* footer styling */
 
 
 
 
-
+/* Login page styling starts */
  /* Login page styling starts */
 
 /* Headings Styles */
-.login-box h3, .create-account-box h3 {
+.login-box h3,
+.create-account-box h3 {
   font-family: 'Georgia', serif;
   font-size: 1.75rem;
   font-weight: bold;
 }
 
-.button-login{
+.button-login {
   background-color: #84754E;
   border-radius: 5px;
   height: 41px;
@@ -283,7 +337,7 @@ font-size: 14px;
   color: white;
 }
 
-.checkbox{
+.checkbox {
   font-size: small;
   color: black;
   font-weight: 500;
