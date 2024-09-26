@@ -29,7 +29,6 @@ const Carousals = () => {
       </button>
     </div>
 
-<ProductsInCarousel />
 
   </div>
 

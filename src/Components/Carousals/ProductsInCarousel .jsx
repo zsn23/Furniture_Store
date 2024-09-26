@@ -20,26 +20,26 @@ const ProductsInCarousel = () => {
 
   return (
     <div className="product-carousel-container   text-center ">
-      <h2 className="fw-bolder text-center fs-1 my-5 fontStyling02">FEATURED PRODUCTS</h2>
-      <div id="productCarousel"  className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" >
+      <h2 className="fw-bolder text-center  my-5 fontStyling02">FEATURED PRODUCTS</h2>
+      <div id="productCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" >
         <div className="carousel-inner carousel-inner_">
           {groupedProducts.map((group, index) => (
             <div className={`carousel-item carousel-item_ ${index === 0 ? "active" : ""}`} key={index}>
               <div className="row justify-content-center g-0">
                 {group.map((product) => (
-                
+
 
                   <div className={`col-12  col-md-4`} key={product.id}>
-  <div className="card card_ h-100 shadow-sm product-card border-1" key={product.id}>
-    <Link className="text-dark a_" to={`/product/${product.id}`}>
-      <img src={product.image} className="card-img-top border-0" alt={product.name} />
-      <div className="card-body py-4 mt-3 text-start">
-        <h5 className="card-title a_title ">{product.name}</h5>
-        <p className="card-text a_price">{product.description}</p>
-      </div>
-    </Link>
-  </div>
-</div>
+                    <div className="card card_ h-100 shadow-sm product-card border-1" key={product.id}>
+                      <Link className="text-dark a_" to={`/product/${product.id}`}>
+                        <img src={product.image} className="card-img-top border-0" alt={product.name} />
+                        <div className="card-body py-4 mt-3 text-start">
+                          <h5 className="card-title a_title ">{product.name}</h5>
+                          <p className="card-text a_price">{product.description}</p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
 
 
 
@@ -52,20 +52,20 @@ const ProductsInCarousel = () => {
           ))}
         </div>
 
-      
+
         {/* Carousel Controls */}
         <div className="d-flex align-items-center">
-        <button className="carousel-control-prev carousel-control-prev_" style={{fontSize:'30px'}} type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-  <i className="bi bi-chevron-left text-dark"  aria-hidden="true"></i>
-  <span className="visually-hidden">Previous</span>
-</button>
+          <button className="carousel-control-prev carousel-control-prev_" style={{ fontSize: '30px' }} type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+            <i className="bi bi-chevron-left text-dark" aria-hidden="true"></i>
+            <span className="visually-hidden">Previous</span>
+          </button>
 
         </div>
 
-<button className="carousel-control-next carousel-control-next_" style={{fontSize:'30px'}} type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-  <i className="bi bi-chevron-right text-dark" aria-hidden="true"></i>
-  <span className="visually-hidden">Next</span>
-</button>
+        <button className="carousel-control-next carousel-control-next_" style={{ fontSize: '30px' }} type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <i className="bi bi-chevron-right text-dark" aria-hidden="true"></i>
+          <span className="visually-hidden">Next</span>
+        </button>
 
       </div>
 

@@ -1,65 +1,70 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './ProductCarousel.css'; // Import custom CSS for additional styling
+import m1 from '../Logo/m1.png'; // Import image
+import m2 from '../Logo/m2.png'; // Import image
+import m3 from '../Logo/m3.png'; // Import image
+import m4 from '../Logo/m4.png'; // Import image
+import Masonry from 'masonry-layout';
+import { Link } from 'react-router-dom';
 
-const CategoryCarousal = () => {
+const CategoryCarousel = () => {
+  useEffect(() => {
+    // Ensure that Masonry initializes only after the component mounts
+    const grid = document.querySelector('.grid');
+
+    // Initialize Masonry
+    const masonryInstance = new Masonry(grid, {
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-item',
+      percentPosition: true,
+    });
+
+    // Optional: Cleanup function to destroy Masonry instance if needed
+    return () => {
+      masonryInstance.destroy();
+    };
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  const categories = [
+    { id: 1, name: 'Tables', image: m3 },
+    { id: 2, name: 'Trund', image: m4 },
+    { id: 3, name: 'Trays', image: m1 },
+    { id: 4, name: 'Boxes', image: m2 },
+    { id: 5, name: 'Boxes', image: m3 },
+    { id: 5, name: 'Boxes', image: m4 },
+
+  ];
+
   return (
-    // <div className="d-flex align-items-center justify-content-between">
-    //   <button className="btn btn-secondary px-2 rounded-start">
-    //     &lt;
-    //   </button>
-    //   <div className="d-flex overflow-auto">
-    //     <div className="d-flex flex-column align-items-center mx-2">
-    //       <img aria-hidden="true" alt="White Mixed Floral Centerpiece in Oval Vase" src="https://openui.fly.dev/openui/150x150.svg?text=🌸" className="img-fluid" />
-    //       <span className="text-muted">White Mixed Floral Centerpiece in Oval Vase</span>
-    //     </div>
-    //     <div className="d-flex flex-column align-items-center mx-2">
-    //       <img aria-hidden="true" alt="Kala Martini Drink Table" src="https://openui.fly.dev/openui/150x150.svg?text=🍸" className="img-fluid" />
-    //       <span className="text-muted">Kala Martini Drink Table</span>
-    //     </div>
-    //     <div className="d-flex flex-column align-items-center mx-2">
-    //       <img aria-hidden="true" alt="FoggyDesert" src="https://openui.fly.dev/openui/150x150.svg?text=🖼️" className="img-fluid" />
-    //       <span className="text-muted">Foggy Desert</span>
-    //     </div>
-    //     <div className="d-flex flex-column align-items-center mx-2">
-    //       <img aria-hidden="true" alt="Lina Metal Oval Nesting Trays, Set of 3" src="https://openui.fly.dev/openui/150x150.svg?text=🍽️" className="img-fluid" />
-    //       <span className="text-muted">Lina Metal Oval Nesting Trays, Set of 3</span>
-    //     </div>
-    //     <div className="d-flex flex-column align-items-end mx-2">
-    //       <img aria-hidden="true" alt="8&quot; Arabesque Porcelain Keep-All Jar" src="https://openui.fly.dev/openui/80x80.svg?text=🏺" className="img-fluid" />
-    //       <span className="text-muted">8" Arabesque Porcelain Keep-All Jar</span>
-    //     </div>
-    //     <div className="d-flex flex-column align-items-center mx-2">
-    //       <img aria-hidden="true" alt="Bridgers Chair" src="https://openui.fly.dev/openui/150x150.svg?text=🪑" className="img-fluid" />
-    //       <span className="text-muted">Bridgers Chair</span>
-    //     </div>
-    //   </div>
-    //   <button className="btn btn-secondary px-2 rounded-end">
-    //     &gt;
-    //   </button>
-    // </div>
+    // <div className='container-fluid'>
 
-    
-    <div>
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    </div>
-    <div class="carousel-item">
-      {/* <img src="..." class="d-block w-100" alt="..."> */}
-    </div>
-    <div class="carousel-item">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-    </div>
+      <div>
+
+      <h1 className='text-center fs-2 my-4 fontStyling02'>TRENDING CATEGORIES</h1>
+
+      <div className="grid grid_   ">
+        {categories.map((category) => (
+          <div className="grid-item grid-item_" key={category.id}>
+            <div className='card card_ border-1 border m-3'>
+              <img src={category.image} alt={category.name} />
+              <div className='card-content card-content_'>
+                <Link className='d-flex align-items-center text-decoration-none' to={`/categories/${category.id}`}>
+                  <h5 className=" p-3">{category.name}</h5>
+                  <i className='bi bi-arrow-right'> </i>
+                </Link>
+              
+              </div>
+              
+            </div>
+          </div>
+        ))}
+      </div>
+      </div>
+   
+    // </div>
+ 
   );
 };
 
-export default CategoryCarousal;
+export default CategoryCarousel;
+
