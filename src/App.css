@@ -212,15 +212,24 @@ font-size: 14px;
 
 
 }
-@media (max-width:409px) {
+
+
+@media (max-width:405px) {
   .btn-tranparent{
-    top:-230px !important;
+    top:-225px !important;
   }
 }
 
-@media (max-width:376px) {
+@media (max-width:400px) {
   .btn-tranparent{
-    top:-225px !important;
+    top:-228px !important;
+  }
+}
+
+
+@media (max-width:364px) {
+  .btn-tranparent{
+    left:-22px !important;
   }
 }
 
