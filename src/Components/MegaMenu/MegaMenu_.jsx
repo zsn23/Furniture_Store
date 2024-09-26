@@ -11,7 +11,7 @@ const MegaMenu = () => {
     return (
         <div className='mt-1'>
 
-<nav className="mega-menu border-top border-bottom p-2 navbar__ justify-content-center">
+<nav className="mega-menu border-top border-bottom p-3 navbar__ justify-content-center">
         <ul className="menu-items">
           <li>
             <Link to="/" className="active">Home</Link>
@@ -112,6 +112,8 @@ const MegaMenu = () => {
                         </div>
                     </div>
                 </li>
+
+
                 <li><Link to="/stockists">Stockists</Link></li>
                 <li><Link to="/about-us">About Us</Link></li>
             </ul>
