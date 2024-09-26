@@ -11,8 +11,8 @@ const Signup = () => {
             
             {/* First Name */}
             <div className="form-group mb-3">
-              <label htmlFor="firstName" className='fw-bold'>First Name <span className="text-danger">*</span></label>
-              <input type="text" className="form-control mt-2" id="firstName"/>
+              <label htmlFor="firstName" className='fw-bold' >First Name <span className="text-danger">*</span></label>
+              <input type="text" className="form-control mt-2" id="firstName" required = 'Please enter your first name'/>
             </div>
 
             {/* Last Name */}
