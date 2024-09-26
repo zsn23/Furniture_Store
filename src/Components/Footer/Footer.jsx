@@ -73,24 +73,29 @@ const Footer = () => {
         <div className="row mt-4 ">
           <hr />
           
-           <div className="col-lg-3 col-md-6 col-12 text-center">
-           <h6 className="mb-0 fw-bold">HAVE A QUESTION ? CONTACT US</h6>
-           </div>
-           <div className="col-lg-3 col-md-6 col-12 text-center">
-           <p>
-           <i className="bi bi-telephone-fill"></i> 03328721429 &nbsp; </p>
-           </div>
-           <div className="col-lg-3 col-md-6 col-12 text-center">
-           <p><i className="bi bi-envelope-fill"></i> Noumankhalil08@gmail.com &nbsp; </p>
-           </div>
-           <div className="col-lg-3 col-md-6 col-12 text-center">
-           <p><i className="bi bi-clock-fill"></i> 
-           M-F, 8:30am-4:45pm PST</p>
-           </div>
+          <div className="col-lg-3 col-md-6 col-12 mb-3">
+  <h6 className="mb-0 fw-bold">HAVE A QUESTION? CONTACT US</h6>
+</div>
+<div className="col-lg-3 col-md-6 col-12 text-center">
+  <p className="contact-item">
+    <i className="bi bi-telephone-fill"></i> 03328721429 &nbsp;
+  </p>
+</div>
+<div className="col-lg-3 col-md-6 col-12 text-center">
+  <p className="contact-item">
+    <i className="bi bi-envelope-fill"></i> Noumankhalil08@gmail.com &nbsp;
+  </p>
+</div>
+<div className="col-lg-3 col-md-6 col-12 text-center">
+  <p className="contact-item">
+    <i className="bi bi-clock-fill"></i> M-F, 8:30am-4:45pm PST
+  </p>
+</div>
+
           <hr />
         </div>
        
-        <div className="mt-3 privacy-policy text-center ">
+        <div className="mt-3 privacy-policy text-center  ">
           <a href="#"className='text-decoration-none' ><i>Privacy Policy |</i></a>
           <a href="#"className='text-decoration-none'><i> Accessibility |</i></a>
           <a href="#"className='text-decoration-none'><i>Do Not Sell or Share My Personal Information (CA residents only) |</i></a>
