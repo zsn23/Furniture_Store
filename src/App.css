@@ -361,49 +361,88 @@ font-size: 14px;
  /* Login page styling ends */
 
 
+
+
+ 
  /* CATEGORY  LAYOUT  */
-
- .grid_{
-  display: flex;
-  justify-content: flex-end !important;
-  margin-left: auto !important;
- }
- .grid-items_{
-  position: relative !important;
-  left: 50px !important;
-  width:350px;
-  height: auto;
-  margin: 1rem;
- }
- .card_{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  z-index: 100 !important;
- }
- .card_ img{
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  height: auto;
-  object-fit: cover;
- }
-.card_{
-  overflow: hidden;
-  position: relative;
-}
-
-
 
 .card_ {
   border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s; /* Smooth hover effect */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .card_:hover {
-  transform: scale(1.05); /* Slightly scale up on hover */
+  transform: scale(1.05);
 }
 
+.card-img-top_ {
+  object-fit: cover;
+  height: auto;
+}
+
+/* Video Styling */
+
+.container_ {
+  max-width: 600px; /* Optional: Limit video width for responsiveness */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnail {
+  position: relative;
+  cursor: pointer;
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  color: #000;
+}
+
+.static-iframe {
+  width: 80%; /* 100% width to fit the container */
+  height: 600px !important; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow from container */
+}
+@media (max-width:917px) {
+  .static-iframe {
+    height: 290px !important; /* Maintain aspect ratio */
+    width: 75%;
+  } 
+}
+
+@media (max-width:471px) {
+  .static-iframe {
+    height: 150px !important; /* Maintain aspect ratio */
+    width: 75%;
+  } 
+}
 

@@ -20,8 +20,8 @@ const ProductsInCarousel = () => {
 
   return (
     <div className="product-carousel-container   text-center ">
-      <h2 className="fw-bolder text-center  my-5 fontStyling02">FEATURED PRODUCTS</h2>
-      <div id="productCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" >
+      <h2 className="fw-lighter text-center  my-5 " style={{ fontFamily: 'Old Standard TT' }}>FEATURED PRODUCTS</h2>
+      <div id="productCarousel" className="carousel slide" data-bs-ride="carousel"  >
         <div className="carousel-inner carousel-inner_">
           {groupedProducts.map((group, index) => (
             <div className={`carousel-item carousel-item_ ${index === 0 ? "active" : ""}`} key={index}>
