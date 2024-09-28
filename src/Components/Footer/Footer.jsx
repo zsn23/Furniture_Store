@@ -7,7 +7,7 @@ const Footer = () => {
         <hr />
         <div className="row">
           {/* COMPANY Section */}
-          <div className="col-md-3 col-6 mb-4">
+          <div className="col-md-4 col-6 mb-4">
             <h5 className="font-weight-bold">COMPANY</h5>
             <ul className="list-unstyled anchor">
               <li><a href="#"className='text-decoration-none'>About Us</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* ONLINE RESOURCES Section */}
-          <div className="col-md-3 col-6 mb-4  Online-resources">
+          {/* <div className="col-md-3 col-6 mb-4  Online-resources">
             <h5 className="font-weight-bold">ONLINE RESOURCES</h5>
             <ul className="list-unstyled anchor">
               <li><a href="#"className='text-decoration-none'>Platinum Card</a></li>
@@ -31,9 +31,9 @@ const Footer = () => {
               <li><a href="#"className='text-decoration-none'>Furniture Protection Plans</a></li>
               <li><a href="#"className='text-decoration-none'>Suppliers</a></li>
             </ul>
-          </div>
+          </div> */}
           {/* CLIENT SERVICES Section */}
-          <div className="col-md-3 col-6 mb-4">
+          <div className="col-md-4 col-6 mb-4">
             <h5 className="font-weight-bold">CLIENT SERVICES</h5>
             <ul className="list-unstyled anchor text-decoration-none">
               <li><a href="#"className='text-decoration-none'>Order Tracking</a></li>
@@ -46,7 +46,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* STAY IN TOUCH Section */}
-          <div className="col-md-3 col-12 mb-4 text-center">
+          <div className="col-md-4 col-12 mb-4 text-center">
             <h2 className="font-weight-bold ">STAY IN TOUCH</h2>
             <p>For the latest news, enter your email address:</p>
             <div className="input-group mb-3">
@@ -64,16 +64,16 @@ const Footer = () => {
           </div>
         </div>
         {/* Footer Bottom */}
-        <div className="feedback d-flex justify-content-center align-items-center">
+        {/* <div className="feedback d-flex justify-content-center align-items-center">
           <a href="#">
           <button className='btn btn-dark text-white '>Feedback</button>
           </a>
           <h6 className='fw-bold mx-2'>We're always looking for ways to improve. Let us know what you think!</h6>
-        </div>
-        <div className="row mt-4 ">
+        </div> */}
+        {/* <div className="row mt-4 ">
           <hr />
           
-          <div className="col-lg-3 col-md-6 col-12 mb-3">
+          <div className="col-lg-3 col-md-6 col-12 mt-1">
   <h6 className="mb-0 fw-bold">HAVE A QUESTION? CONTACT US</h6>
 </div>
 <div className="col-lg-3 col-md-6 col-12 text-center">
@@ -93,7 +93,7 @@ const Footer = () => {
 </div>
 
           <hr />
-        </div>
+        </div> */}
        
         <div className="mt-3 privacy-policy text-center  ">
           <a href="#"className='text-decoration-none' ><i>Privacy Policy |</i></a>
