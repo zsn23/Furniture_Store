@@ -1,28 +1,3 @@
-
-.fontStyling {
-  font-family: "Quicksand", sans-serif;
-}
-
-.fontStyling02 {
-  font-family: "avenirnextregular", "Arial", sans-serif;
-  font-size: 30px;
-}
-
-@media (max-width: 375px) {
-  .fontStyling02 {
-    font-size: 1.5rem;
-  }
-}
-
-.textBlack {
-  color: black;
-  text-decoration: none;
-}
-
-
-/* Mega Menu styling */
-
-/* Header Styling */
 .fontStyling{
   font-family: 'Arial', sans-serif;  
   font-size: smaller;
@@ -34,14 +9,15 @@
 font-family: 'Arial', sans-serif;  
 letter-spacing: 0.20rem;
 }
-.text-decoration-none {
-  color: inherit;
-}
 
 @media (max-width: 375px) {
   .fontStyling02 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
+}
+
+.text-decoration-none {
+  color: inherit;
 }
 
 .hover-underline {
@@ -52,26 +28,34 @@ text-decoration: none;
 text-decoration: underline;
 text-decoration-thickness: -1px; 
 }
-/* Input focus: Black border when clicked */
-.custom-input:focus {
-border-color: black !important;
-box-shadow: none !important; 
-outline: none;
-}
 
 .dropdown-item {
 color: #000; 
 background-color: transparent !important; 
 }
-
-input.form-control:focus {
-  border-color: black; 
-  box-shadow: none; 
+.input-group{
+  width: 10%;
+}
+input.form-control:focus { 
+ box-shadow: none; 
 }
 
+input.searchInput {
+  border: 1px solid black !important;
+}
+
+@media (min-width: 769px) {
+  .searchInput {
+    width: 50% !important;
+  }
+
+  .input-group {
+    width: 50% !important;
+  }
+}
 
 .account-dropdown {
-width: 200px; 
+width: 190px; 
 padding: 10px;
 border: 1px solid #ddd;
 background-color: white;
@@ -88,18 +72,36 @@ margin: 0;
 margin-bottom: 8px;
 }
 
-.account-dropdown li:last-child {
-margin-bottom: 0;
-}
-
 .account-dropdown .dropdown-item {
 font-size: 14px; 
 }
 
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #F8F9FA;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
 
+.hidden {
+  display: none;
+}
 
-
-
+.show-search {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 426px) {
+  .navbar-top {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1001 !important; 
+  }
+}
 
 
 
