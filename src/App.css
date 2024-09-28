@@ -282,33 +282,12 @@ font-size: 14px;
 
 }
 
-/* @media (max-width : 768px) {
-  .btn-transparent{
-    display: flex !important;
-  }
-} */
-
-
 @media (max-width:426px) {
   .btn-transparent{
     top:-179px !important;
     left: 0px !important;
   }
 }
-
-
-/*
-@media (max-width:375px) {
-  .btn-transparent{
-    top:-229px !important;
-  }
-} */
-/* @media (max-width:400px) {
-  .btn-tranparent{
-    top:-228px !important;
-  }
-} */
-
 
 
 /* footer styling */
