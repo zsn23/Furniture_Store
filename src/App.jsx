@@ -10,6 +10,8 @@ import Login from './Components/Account/Login'
 import Signup from './Components/Account/Signup'
 import Aboutus from './Components/About us/Aboutus'
 import OrderTrack from './Components/Ordertracking/OrderTrack'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Location from './Pages/Location'
 
 
 
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/signup" element={<Signup/>} />
         <Route path="/about-us" element={<Aboutus/>} />
         <Route path="/ordertrack" element={<OrderTrack/>} />
+        <Route path='/location' element={<Location/>}/>
         {/* <Route path="/furniture" element={<Furniture />} />
         <Route path="/furniture/sofas" element={<Sofas />} />
         <Route path="/furniture/beds" element={<Beds />} />

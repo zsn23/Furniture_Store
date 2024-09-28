@@ -5,48 +5,163 @@
   top: 170px !important;
   width: 25px !important;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.3) !important;
   border-radius: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* .card-img-top{
+ max-width: 300px !important;
+} */
+
+
 @media (max-width:769px) {
-    /* Adjust the carousel controls */
-.carousel-control-prev_,
-.carousel-control-next_ {
+
+  .carousel-control-prev_,
+  .carousel-control-next_ {
     top: 1050px !important
-}
-    
+  }
+
+  .carousel-inner_ .row{
+    padding: 50px;
+  }
+  
+
 }
 
 .carousel-control-prev_ {
-  left: 40px !important; /* Set to the very left */
+  left: 15px !important;
+  
 }
 
 .carousel-control-next_ {
-  right: 40px !important; /* Set to the very right */
+  right: 15px !important;
+ 
 }
 
+
+.row_ {
+  margin-left: 0;
+  margin-right: 0;
+  overflow-x: hidden;
+}
 /* Adjust the card size */
 .product-card {
-  max-width: 250px; /* Make the card smaller */
-  margin: 0 auto;   /* Center the cards */
+ 
+  /* height: 100% !important; */
+  max-width: 280px;
+  margin: 0 auto;
+ 
 }
 
 /* Adjust carousel content positioning */
 .carousel-inner_ .row {
   display: flex;
-  justify-content: center; /* Center the product cards */
+  justify-content:space-between !important;
   align-items: center;
 }
 
-.carousel-item {
-  text-align: center; /* Make sure content is centered */
+.carousel-item_ {
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Optional: Adjust carousel container to ensure full width */
 .product-carousel-container {
   position: relative;
 }
+
+/* a {
+  text-decoration: none !important;
+} */
+.a_{
+  text-decoration: none !important;  
+}
+
+.a_title {
+  font-weight: lighter;
+  font-size: smaller;
+  font-family: sans-serif;
+}
+
+.a_title:hover {
+  text-decoration: underline;
+}
+
+.a_price {
+  font-weight: lighter;
+  font-size: 12px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.a_price:hover {
+  text-decoration: underline;
+}
+
+.btn-outline-dark_:hover{
+  background-color: #84754E !important;
+}
+
+
+
+
+/* For screens 884px or smaller, display only 1 product */
+/* @media (max-width: 884px) {
+  .carousel-inner_ .row {
+    flex-wrap: nowrap !important;
+  
+    padding: 30px;
+  }
+
+  .carousel-control-prev_,
+  .carousel-control-next_ {
+    top: 150px !important
+  }
+
+  .carousel-control-prev_ {
+    left: 10px !important;
+   
+  }
+
+  .carousel-control-next_ {
+    right: 10px !important;
+  }
+
+
+  .product-card {
+    max-width: 60%;
+  }
+
+} */
+
+
+@media (max-width: 884px) {
+  .carousel-inner_ .row {
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    /* padding: 15px; */
+  }
+
+  .product-card {
+    max-width:55%;
+    height: 100% !important;
+  }
+
+
+
+  .carousel-control-prev_,
+  .carousel-control-next_ {
+    top: 150px !important;
+  }
+
+  .carousel-control-prev_ {
+    left: 0px !important;
+  }
+
+  .carousel-control-next_ {
+    right: 0px !important;
+  }
+}
+
+
