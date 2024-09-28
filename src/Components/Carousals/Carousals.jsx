@@ -7,7 +7,7 @@ import ProductsInCarousel from './ProductsInCarousel ';
 const Carousals = () => {
   return (
     <div>
-    <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="1000">
+    <div id="carouselExampleControlsNoTouching" className="mt-3 carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="1000">
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src={carosal_img4} className="d-block w-100" alt="First slide" />

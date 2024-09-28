@@ -294,12 +294,12 @@ switch (language) {
   }, []);
 
   return (
-    <div className={`container-fluid mt-4 ${isSticky ? 'sticky-header' : ''}`}>
+    <div className={`container-fluid  ${isSticky ? 'sticky-header' : ''}`}>
       {/* Logo and Navigation Row */}
       <div className="row  align-items-center">
         <div className="col-12 col-md-6 d-flex justify-content-md-start justify-content-center mb-3 mb-md-0">
           <Link to='/' className='text-decoration-none'>
-            <h2 className="fontStyling02 text-center mt-3 text-md-left">FURNITURE HOP</h2>
+            <h2 className="fontStyling0 mt-3">FURNITURE HOP</h2>
           </Link>
         </div>
 
@@ -309,7 +309,7 @@ switch (language) {
             {/* Location */}
             <div className="d-flex align-items-center px-1">
               <small className="d-flex align-items-center">
-                <Link to='/location' className='text-decoration-none'>
+                <Link to='/location' className='text-decoration-none LocationMyaccountHover_____'>
                   <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="21px" fill="#000000">
                     <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
                   </svg>
@@ -320,7 +320,7 @@ switch (language) {
 
             {/* My Account */}
             <div className="d-flex align-items-center mx-1">
-              <small className="d-flex align-items-center">
+              <small className="d-flex align-items-center LocationMyaccountHover_____">
                 <div
                   className="dropdown"
                   onMouseEnter={() => setAccountHovered(true)}
@@ -344,8 +344,8 @@ switch (language) {
 
             {/* My Cart */}
             <div className="d-flex align-items-center mx-1">
-              <Link to='/MyCart' className='text-decoration-none'>
-                <small className="d-flex justify-content-center align-items-center bg-black text-white px-2 py-1 rounded hover-underline">
+              <Link to='/MyCart' className='text-decoration-none '>
+                <small className="d-flex justify-content-center align-items-center MycartBtn  text-dark px-2 py-1 border border-dark rounded-pill hover-underline">
                   MY CART
                 </small>
               </Link>
@@ -357,7 +357,7 @@ switch (language) {
       {/* Row for Navigation Links and Search */}
       <div className="row align-items-center">
         {/* Country Dropdown */}
-        <div className="col-12 col-md-6 d-flex justify-content-start">
+        <div className="col-12 col-md-6 d-flex justify-content-md-start justify-content-center">
           <div 
             className="dropdown"
             onMouseEnter={() => setIsHovered(true)}
@@ -399,16 +399,16 @@ switch (language) {
 
         {/* Search Input */}
             
-                <div className="col-12 col-md-6 d-flex justify-content-end">
+                <div className="col-12 col-md-6 d-flex justify-content-end mb-2">
         <div className="input-group search-container">
   <input
     type="text"
-    placeholder="Search items"
-    className="form-control fw-semibold fs-6 searchInput"
+    placeholder="Search"
+    className="form-control fw-semibold fs-6 searchInput border border-dark rounded-pill"
   />
   <span className="bg-transparent border-0">
     <svg
-      style={{ position: 'absolute', right: '15px', top: '10px' }}
+      style={{ position: 'absolute', right: '8px', top: '11px', zIndex:'10' }}
       width="16"
       height="16"
     >

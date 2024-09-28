@@ -41,7 +41,18 @@ input.form-control:focus {
 }
 
 input.searchInput {
-  border: 1px solid black !important;
+  /* border: 0.01rem solid black !important; */
+ 
+  background-color: #F8F9FA !important;
+  font-size: 0.9rem !important;
+  font-weight: 200 !important;
+}
+
+.searchInput::placeholder {
+  color: black !important; /* Change to your desired color */
+  opacity: 1; /* Optional: Make sure the color is fully opaque */
+  font-weight: 200 !important;
+  font-size: smaller;
 }
 
 @media (min-width: 769px) {
@@ -87,6 +98,18 @@ font-size: 14px;
 
 .hidden {
   display: none;
+}
+
+.LocationMyaccountHover_____{
+  transform: text-decoration 0.6s ease-in-out;
+}
+
+.LocationMyaccountHover_____:hover{
+  text-decoration: underline !important;
+}
+.MycartBtn:hover{
+  color: whitesmoke !important;
+  background-color:  #84754E;
 }
 
 .show-search {
@@ -227,10 +250,16 @@ font-size: 14px;
 }
 
 
+
+
 /* Media Queries */
 @media (max-width:769px) {
   .navbar__ {
-    display: none !important;
+    display: none ;
+    background-color: transparent !important;
+  }
+  .MegaMainDiv{
+    position: absolute;
   }
 }
 
@@ -253,26 +282,32 @@ font-size: 14px;
 
 }
 
-
-@media (max-width:407px) {
+/* @media (max-width : 768px) {
   .btn-transparent{
-    top:-233px !important;
-    left:-5px !important;
+    display: flex !important;
+  }
+} */
+
+
+@media (max-width:426px) {
+  .btn-transparent{
+    top:-179px !important;
+    left: 0px !important;
   }
 }
 
+
+/*
+@media (max-width:375px) {
+  .btn-transparent{
+    top:-229px !important;
+  }
+} */
 /* @media (max-width:400px) {
   .btn-tranparent{
     top:-228px !important;
   }
 } */
-
-
-@media (max-width:375px) {
-  .btn-transparent{
-    top:-229px !important;
-  }
-}
 
 
 

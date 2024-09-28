@@ -93,7 +93,7 @@ const CategoryCarousel = () => {
 
   return (
     <div className='container'>
-      <h1 className='text-center fs-1 mt-5 fw-lighter custom-font-styling_ ' style={{ fontFamily: 'Old Standard TT' }}>TRENDING CATEGORIES</h1>
+      <h1 className='text-center fs-1 mt-5 fw-lighter custom-font-styling_ border-bottom  p-3' style={{ fontFamily: 'Old Standard TT' }}>TRENDING CATEGORIES</h1>
 
       <div className="row">
         {categories.map((category) => (
@@ -101,8 +101,8 @@ const CategoryCarousel = () => {
             <div className='card card_ h-100  m-2'>
               <img src={category.image} className="card-img-top card-img-top_ h-100" alt={category.name} />
               <div className='card-body  card-body_'>
-                <Link className='d-flex align-items-center text-decoration-none' to={`/categories/${category.id}`}>
-                  <h5 className="p-3">{category.name}</h5>
+                <Link className='d-flex align-items-center gap-2 icon-link-hover text-decoration-none' to={`/categories/${category.id}`}>
+                  <h5 className="px-1 pt-1 ">{category.name}</h5>
                   <i className='bi bi-arrow-right'> </i>
                 </Link>
               </div>

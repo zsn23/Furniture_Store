@@ -48,7 +48,7 @@ import { Link } from 'react-router-dom'
 const NavbarTop = () => {
     return (
         <>
-            <div className="container-fluid d-flex justify-content-center navbar-top" style={{ backgroundColor: '#555B4A', height: '27px' }}>
+            <div className="container-fluid d-flex justify-content-center navbar-top" style={{ backgroundColor: '#84754E', height: '27px' }}>
                 <div className="row satrting_msg m-0 p-0">
                     <div id="carouselExampleSlidesOnly" className="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="3000">
                         <div className="carousel-inner text-white ">

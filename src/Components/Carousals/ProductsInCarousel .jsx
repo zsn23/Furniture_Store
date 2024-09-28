@@ -20,7 +20,7 @@ const ProductsInCarousel = () => {
 
   return (
     <div className="product-carousel-container   text-center ">
-      <h2 className="fw-lighter text-center  my-5 " style={{ fontFamily: 'Old Standard TT' }}>FEATURED PRODUCTS</h2>
+      <h2 className="fw-lighter text-center border-bottom p-3 my-5 " style={{ fontFamily: 'Old Standard TT' }}>FEATURED PRODUCTS</h2>
       <div id="productCarousel" className="carousel slide" data-bs-ride="carousel"  >
         <div className="carousel-inner carousel-inner_">
           {groupedProducts.map((group, index) => (
@@ -70,7 +70,7 @@ const ProductsInCarousel = () => {
       </div>
 
       {/* View More Button */}
-      <button className="btn btn-outline-dark btn-outline-dark_ rounded-pill mt-4 fontStyling02">EXPLORE MORE</button>
+      <button className="btn btn-outline-dark btn-outline-dark_ rounded-pill my-4 fontStyling02">EXPLORE MORE</button>
     </div>
   );
 };

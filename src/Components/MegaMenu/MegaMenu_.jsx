@@ -20,8 +20,8 @@ const MegaMenu = () => {
     };
 
     return (
-        <div className='mt-1' onClick={closeAllAccordions}>
-            <nav className="mega-menu border-top border-bottom p-3 navbar__ justify-content-center">
+        <div className='mt-1 MegaMainDiv h-0' onClick={closeAllAccordions}>
+            <nav className="mega-menu border-top border-bottom navbar__ p-3 justify-content-center">
                 <ul className="menu-items">
                     <li>
                         <Link to="/" className={isActive("/") ? "active" : ""}>HOME</Link>
@@ -74,7 +74,7 @@ const MegaMenu = () => {
             </nav>
 
             {/* Hamburger Button */}
-            <button className="btn btn-transparent fs-2 d-md-none" style={{ position: 'relative', top: '-206px', left: '24px' }} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+            <button className="btn btn-transparent fs-2 d-md-none" style={{ position: 'relative', top: '-183px', left: '0px' }} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
                 <i className="fa fa-thin fa-bars"></i>
             </button>
 
@@ -100,7 +100,9 @@ const MegaMenu = () => {
                                             e.stopPropagation();
                                             handleAccordionToggle('furniture');
                                         }}
-                                        className='accordion-button text-decoration-none'  
+                                        className='accordion-button text-decoration-none' 
+                                        style={{display:'flex' , alignItems:'center' ,justifyContent:'center'}} 
+
                                     >
                                         Furniture <i className="bi bi-caret-down-fill caret"></i>
                                     </Link>
@@ -124,7 +126,8 @@ const MegaMenu = () => {
                                             e.stopPropagation();
                                             handleAccordionToggle('customizeFurniture');
                                         }}
-                                        className='accordion-button text-decoration-none ' 
+                                        className='accordion-button text-decoration-none'
+                                        style={{display:'flex' , alignItems:'center' ,justifyContent:'center'}} 
                                     >
                                         Customize Furniture <i className="bi-fill bi-caret-down-fill caret"></i>
                                     </Link>
@@ -146,6 +149,8 @@ const MegaMenu = () => {
                                             handleAccordionToggle('accessories');
                                         }}
                                         className='accordion-button text-decoration-none' 
+                                        style={{display:'flex' , alignItems:'center' , justifyContent:'center'}} 
+
                                     >
                                         Accessories <i className="bi-fill bi-caret-down-fill caret"></i>
                                     </Link>
