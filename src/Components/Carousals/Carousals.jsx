@@ -1,13 +1,12 @@
 // import React from 'react';
 // import carosal_img1 from '../Logo/sept2024_touchscreen.jpg'
-import carosal_img4 from '../Logo/c1 (2).jpeg'
-import ProductsInCarousel from './ProductsInCarousel ';
+import carosal_img4 from '../Logo/c1 (2).jpg'
 
 
 const Carousals = () => {
   return (
     <div>
-    <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="3000">
+    <div id="carouselExampleControlsNoTouching" className="mt-3 carousel slide" data-bs-touch="false" data-bs-ride="carousel" data-bs-interval="1000">
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img src={carosal_img4} className="d-block w-100" alt="First slide" />
@@ -29,7 +28,6 @@ const Carousals = () => {
       </button>
     </div>
 
-<ProductsInCarousel />
 
   </div>
 
