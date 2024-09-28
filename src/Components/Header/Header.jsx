@@ -296,10 +296,10 @@ switch (language) {
   return (
     <div className={`container-fluid mt-4 ${isSticky ? 'sticky-header' : ''}`}>
       {/* Logo and Navigation Row */}
-      <div className="row mt-3 align-items-center">
-        <div className="col-12 col-md-6 d-flex justify-content-md-start justify-content-center mb-1 mb-md-0">
+      <div className="row  align-items-center">
+        <div className="col-12 col-md-6 d-flex justify-content-md-start justify-content-center mb-3 mb-md-0">
           <Link to='/' className='text-decoration-none'>
-            <h2 className="fontStyling02 text-center text-md-left">FURNITURE HOP</h2>
+            <h2 className="fontStyling02 text-center mt-3 text-md-left">FURNITURE HOP</h2>
           </Link>
         </div>
 
