@@ -46,6 +46,7 @@ letter-spacing: 0.20rem;
 
 .hover-underline {
 text-decoration: none; 
+
 }
 
 .hover-underline:hover {
@@ -63,12 +64,6 @@ outline: none;
 color: #000; 
 background-color: transparent !important; 
 }
-
-input.form-control:focus {
-  border-color: black; 
-  box-shadow: none; 
-}
-
 
 .account-dropdown {
 width: 200px; 
@@ -250,24 +245,15 @@ font-size: 14px;
 
 
 }
+@media (max-width:409px) {
+  .btn-tranparent{
+    top:-230px !important;
+  }
+}
 
-
-@media (max-width:405px) {
+@media (max-width:376px) {
   .btn-tranparent{
     top:-225px !important;
-  }
-}
-
-@media (max-width:400px) {
-  .btn-tranparent{
-    top:-228px !important;
-  }
-}
-
-
-@media (max-width:364px) {
-  .btn-tranparent{
-    left:-22px !important;
   }
 }
 

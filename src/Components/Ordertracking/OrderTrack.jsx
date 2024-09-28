@@ -38,7 +38,7 @@ const OrderTrack = () => {
                             <p className='mt-5'><i className="bi bi-telephone-fill"></i> 03328721429</p>
                             <p className='mt-5'><i className="bi bi-envelope-fill"></i> Noumankhalil08@gmail.com</p>
                             <p className='mt-5'><i className="bi bi-clock-fill"></i> M-F, 8:30am-4:45pm PST</p>
-                            <p className='mt-5'><i className="bi bi-chat-dots-fill"></i>Chat live with us anytime</p>
+                            <p className='mt-5'><i className="bi bi-chat-dots-fill"></i> Chat live with us anytime</p>
                         </div>
                     </div>
 
