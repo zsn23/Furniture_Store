@@ -7,7 +7,7 @@ const Signup = () => {
       <div className="container mt-5 px-5">
         <div className="col-lg-12 col-md-12 col-12 mt-4 mt-lg-0">
           <div className="create-account-box">
-            <h3 className="mb-3">Create an Account</h3>
+            <h3 className="mb-3" style={{ fontFamily: 'Old Standard TT' }}>Create an Account</h3>
             
             {/* First Name */}
             <div className="form-group mb-3">
@@ -75,20 +75,9 @@ const Signup = () => {
               </select>
             </div>
 
-            <div className="form-group mb-3">
-              <label htmlFor="designCenter" className='fw-bold'>Please Select a Design Center</label>
-              <select className="form-control mt-2" id="designCenter" name="designCenter">
-                <option value="">Select Design Center</option>
-              </select>
-            </div>
+           
 
-            <div className="form-group mb-3">
-              <label htmlFor="designer" className='fw-bold'>Please Select a Designer</label>
-              <select className="form-control mt-2" id="designer" name="designer">
-                <option value="">Select Preferred Designer</option>
-               
-              </select>
-            </div>
+           
             <div>
             <div >
       <input type="checkbox"  id="vehicle1" name="vehicle1" value="Bike" />

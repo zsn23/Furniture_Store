@@ -435,3 +435,149 @@ font-size: 14px;
   } 
 }
 
+
+
+/* Term of policy styling starts */
+.TOSMaincontainer {
+  font-family: Questrial, sans-serif !important;
+  background-color: #eff0f5 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  margin: 0;
+}
+
+.TOS-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+}
+
+.TOS-container h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3rem; /* Increased font size for better readability */
+  color: #84754E;
+  margin-bottom: 20px;
+}
+
+.TOS-container h6 {
+  color: #84754E;
+  font-weight: 600;
+  font-size: 1.25rem; /* Increased font size for better readability */
+  margin-bottom: 15px;
+}
+
+.TOS-container p {
+  color:black;
+  font-size: 1.1rem; /* Increased font size for better readability */
+  line-height: 1.6; /* Added line-height for better spacing between lines */
+  font-family: Questrial, sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 400 !important;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.TOS-container ul {
+  padding-left: 20px;
+  
+}
+
+.TOS-container li {
+ text-decoration: none; 
+  font-size: 1.1rem; /* Increased font size for better readability */
+  font-family: Questrial, sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 500; /* Changed to make the text slightly bolder */
+  opacity: 0.9;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.TOS-container li::marker {
+  font-weight: bold; /* Bold list markers for emphasis */
+}
+
+/* Term of policy styling ends */
+
+
+/* Refund Policy Styling starts */
+
+.PolicyMaincontainer {
+  font-family: 'Questrial', sans-serif !important;
+  background-color: #eff0f5 !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; /* Full height for better layout */
+  padding: 40px 20px; /* Increased padding for better spacing */
+  margin: 0;
+}
+
+.policy-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 900px; /* Increased max-width for better readability */
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.policy-container:hover {
+  transform: translateY(-5px); /* Subtle lift effect on hover */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.policy-container h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 3rem; /* Larger font size for the main title */
+  color: #84754E;
+  margin-bottom: 25px; /* Increased margin for separation */
+  font-family: 'Questrial', sans-serif;
+}
+
+.policy-container h2, .policy-container h3 {
+  color: #84754E;
+  font-size: 2rem; /* Larger size for better emphasis */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.policy-container p {
+  color: #333;
+  font-size: 1.2rem; /* Larger font for better readability */
+  line-height: 1.8; /* Increased line-height for readability */
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 400 !important;
+  opacity: 0.95; /* Darker for improved contrast */
+  margin-bottom: 25px;
+}
+
+
+.policy-container li {
+  color: #333;
+  font-size: 1.2rem; /* Larger size for consistency */
+  font-family: 'Questrial', sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  opacity: 0.85; /* Improved visibility */
+  padding: 5px;
+  margin-top: 5px;
+}
+
+
+/* Refund Policy Styling ends */
+
+
+
