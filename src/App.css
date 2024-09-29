@@ -97,6 +97,38 @@ font-size: 14px;
   }
 }
 
+.input-group{
+  width: 10%;
+}
+input.form-control:focus { 
+ box-shadow: none; 
+}
+
+input.searchInput {
+  /* border: 0.01rem solid black !important; */
+ 
+  background-color: #F8F9FA !important;
+  font-size: 0.9rem !important;
+  font-weight: 200 !important;
+}
+
+.searchInput::placeholder {
+  color: black !important; /* Change to your desired color */
+  opacity: 1; /* Optional: Make sure the color is fully opaque */
+  font-weight: 200 !important;
+  font-size: smaller;
+}
+
+@media (min-width: 769px) {
+  .searchInput {
+    width: 50% !important;
+  }
+
+  .input-group {
+    width: 50% !important;
+  }
+}
+
 
 
   
