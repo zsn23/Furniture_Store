@@ -12,6 +12,9 @@ import Aboutus from './Components/About us/Aboutus'
 import OrderTrack from './Components/Ordertracking/OrderTrack'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Location from './Pages/Location'
+import ContactUs from './Components/Contactus/Contactus'
+import TermsofServices from './Components/termsofservice/TermsofServices'
+import RefundPolicy from './Components/refundPolicy/RefundPolicy'
 
 
 
@@ -27,6 +30,9 @@ const App = () => {
         <Route path="/about-us" element={<Aboutus/>} />
         <Route path="/ordertrack" element={<OrderTrack/>} />
         <Route path='/location' element={<Location/>}/>
+        <Route path='/contact-us' element={<ContactUs/>}/>
+        <Route path='/terms&conditions' element={<TermsofServices/>}/>
+        <Route path='/refundpolicy' element={<RefundPolicy/>}/>
         {/* <Route path="/furniture" element={<Furniture />} />
         <Route path="/furniture/sofas" element={<Sofas />} />
         <Route path="/furniture/beds" element={<Beds />} />

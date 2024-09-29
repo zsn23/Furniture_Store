@@ -18,7 +18,7 @@ const Aboutus = () => {
         {/* About Us content */}
         <div className="row justify-content-center">
           <div className="col-lg-8 col-md-10 col-sm-12">
-            <h2 className="text-center my-4">ABOUT US</h2>
+            <h2 className="text-center my-4" style={{ fontFamily: 'Old Standard TT' }}>ABOUT US</h2>
             
             <p className="text-justify">
               Furniture HOP home incorporates style and finesse into each piece of furniture, adding sophistication and elegance.

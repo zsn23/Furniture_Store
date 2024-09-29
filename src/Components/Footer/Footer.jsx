@@ -1,5 +1,7 @@
-// import React from 'react';
+import { Link } from "react-router-dom";
 
+// import React from 'react';
+Link
 const Footer = () => {
   return (
     <footer className="footer bg-light py-4">
@@ -10,14 +12,12 @@ const Footer = () => {
           <div className="col-md-4 col-6 mb-4">
             <h5 className="font-weight-bold">COMPANY</h5>
             <ul className="list-unstyled anchor">
-              <li><a href="#"className='text-decoration-none'>About Us</a></li>
-              <li><a href="#"className='text-decoration-none'>Social Responsibility</a></li>
-              <li><a href="#"className='text-decoration-none'>Press Releases</a></li>
+              <li><Link to="/about-us"className='text-decoration-none'>About Us</Link></li>
+              <li><Link to="/terms&conditions"className='text-decoration-none'>Terms & Conditions</Link></li>
+              <li><Link to="/refundpolicy"className='text-decoration-none'>Refund Policy</Link></li>
               <li><a href="#"className='text-decoration-none'>Investor Relations</a></li>
               <li><a href="#"className='text-decoration-none'>Career Opportunities</a></li>
-              <li><a href="#"className='text-decoration-none'>The Trade</a></li>
-              <li><a href="#"className='text-decoration-none'>Hospitality</a></li>
-              <li><a href="#"className='text-decoration-none'>Business Development</a></li>
+        
             </ul>
           </div>
           {/* ONLINE RESOURCES Section */}
@@ -36,13 +36,12 @@ const Footer = () => {
           <div className="col-md-4 col-6 mb-4">
             <h5 className="font-weight-bold">CLIENT SERVICES</h5>
             <ul className="list-unstyled anchor text-decoration-none">
-              <li><a href="#"className='text-decoration-none'>Order Tracking</a></li>
+              <li><Link to="/ordertrack"className='text-decoration-none'>Order Tracking</Link></li>
               <li><a href="#"className='text-decoration-none'>Shipping</a></li>
               <li><a href="#"className='text-decoration-none'>FAQs</a></li>
-              <li><a href="#"className='text-decoration-none'>Mailing List Preferences</a></li>
               <li><a href="#"className='text-decoration-none'>Email Preferences</a></li>
-              <li><a href="#"className='text-decoration-none'>Product Recalls</a></li>
-              <li><a href="#"className='text-decoration-none'>Contact Us</a></li>
+
+              <li><Link to="/contact-us"className='text-decoration-none'>Contact Us</Link></li>
             </ul>
           </div>
           {/* STAY IN TOUCH Section */}
@@ -100,8 +99,8 @@ const Footer = () => {
           <a href="#"className='text-decoration-none'><i> Accessibility |</i></a>
           <a href="#"className='text-decoration-none'><i>Do Not Sell or Share My Personal Information (CA residents only) |</i></a>
           <a href="#"className='text-decoration-none'><i> CA Transparency in Supply Chains Act |</i></a>
-          <a href="#"className='text-decoration-none'><i> Terms & Conditions | Cookie Settings |</i></a>
-          <a href="#"className='text-decoration-none'><i>Site Map</i></a>
+          <Link to="/terms&conditions"className='text-decoration-none'><i> Terms & Conditions  |</i></Link>
+          <Link to="/location"className='text-decoration-none'><i>Site Map</i></Link>
        
         </div>
 

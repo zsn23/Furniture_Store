@@ -8,7 +8,7 @@ const OrderTrack = () => {
 
                     <div className="col-lg-9 col-md-12 col-12 ">
                         <div className="login-box p-4 border rounded">
-                            <h3 className="mb-3">Check an Order</h3>
+                            <h3 className="mb-3" style={{ fontFamily: 'Old Standard TT' }}>Check an Order</h3>
                             <p>Whether you ordered online or in the Design Center, you can check your order status here.</p>
                             <form>
                                 <div className="form-group mb-3">
