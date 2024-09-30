@@ -1,6 +1,5 @@
 .fontStyling{
   font-family: 'Arial', sans-serif;  
-  font-size: smaller;
   letter-spacing: 0.22rem;
   margin-top: 3px;
 }
@@ -610,6 +609,24 @@ input.searchInput {
 
 
 /* Refund Policy Styling ends */
+
+
+
+
+/*-------------------Mega Menu Page Lamp start-----------------------*/
+.breadcrumb-link {
+  transition: color 0.3s ease, 
+  font-weight 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #84754E;
+  font-weight: bold;
+}
+
+/*-------------------Mega Menu Lamp ends-----------------------*/
+
+
 
 
 
