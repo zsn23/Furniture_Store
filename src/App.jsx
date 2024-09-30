@@ -15,7 +15,7 @@ import Location from './Pages/Location'
 import ContactUs from './Components/Contactus/Contactus'
 import TermsofServices from './Components/termsofservice/TermsofServices'
 import RefundPolicy from './Components/refundPolicy/RefundPolicy'
-
+import EmailPreferences from './Components/Footer/EmailPreferences'
 
 
 const App = () => {
@@ -43,6 +43,7 @@ const App = () => {
         <Route path="/accessories/rugs" element={<Rugs />} />
         <Route path="/stockists" element={<Stockists />} />
         <Route path="/about-us" element={<AboutUs />} /> */}
+        <Route path='/email-preferences' element={<EmailPreferences/>}/>
     </Routes>
 
     <Footer/>
