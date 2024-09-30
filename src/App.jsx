@@ -15,6 +15,9 @@ import Location from './Pages/Location'
 import ContactUs from './Components/Contactus/Contactus'
 import TermsofServices from './Components/termsofservice/TermsofServices'
 import RefundPolicy from './Components/refundPolicy/RefundPolicy'
+import ProductDetail from './Components/products detail/ProductDetail'
+import Cart from './Components/Cart/Cart'
+
 
 
 
@@ -33,6 +36,8 @@ const App = () => {
         <Route path='/contact-us' element={<ContactUs/>}/>
         <Route path='/terms&conditions' element={<TermsofServices/>}/>
         <Route path='/refundpolicy' element={<RefundPolicy/>}/>
+        <Route path="/product/:id" element={<ProductDetail/>} />
+        <Route path="/MyCart" element={<Cart/>} />
         {/* <Route path="/furniture" element={<Furniture />} />
         <Route path="/furniture/sofas" element={<Sofas />} />
         <Route path="/furniture/beds" element={<Beds />} />
