@@ -299,7 +299,7 @@ switch (language) {
       <div className="row  align-items-center">
         <div className="col-12 col-md-6 d-flex justify-content-md-start justify-content-center mb-3 mb-md-0">
           <Link to='/' className='text-decoration-none'>
-            <h2 className="fontStyling0 mt-3">FURNITURE HOP</h2>
+            <h2 className="fontStyling mt-3">FURNITURE HOP</h2>
           </Link>
         </div>
 

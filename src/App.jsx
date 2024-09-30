@@ -16,7 +16,7 @@ import ContactUs from './Components/Contactus/Contactus'
 import TermsofServices from './Components/termsofservice/TermsofServices'
 import RefundPolicy from './Components/refundPolicy/RefundPolicy'
 import EmailPreferences from './Components/Footer/EmailPreferences'
-
+import Lamps from './Components/Accessories/Lamps'
 
 const App = () => {
   return (
@@ -44,6 +44,7 @@ const App = () => {
         <Route path="/stockists" element={<Stockists />} />
         <Route path="/about-us" element={<AboutUs />} /> */}
         <Route path='/email-preferences' element={<EmailPreferences/>}/>
+        <Route path='/accessories/lamps' element={<Lamps/>}/>
     </Routes>
 
     <Footer/>

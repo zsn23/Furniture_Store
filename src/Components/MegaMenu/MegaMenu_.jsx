@@ -62,7 +62,7 @@ const MegaMenu = () => {
                         <Link >ACCESSORIES <i className="bi bi-caret-up-fill caret"></i></Link>
                         {accessoriesDropdown && (
                             <div className="dropdown-content">
-                                <Link to="/accessories/lamps">Lamps</Link>
+                                <Link to="/accessories/lamps" >Lamps</Link>
                                 <Link to="/accessories/vases">Vases</Link>
                                 <Link to="/accessories/rugs">Rugs</Link>
                             </div>
