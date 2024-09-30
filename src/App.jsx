@@ -17,6 +17,7 @@ import TermsofServices from './Components/termsofservice/TermsofServices'
 import RefundPolicy from './Components/refundPolicy/RefundPolicy'
 import ProductDetail from './Components/products detail/ProductDetail'
 import Cart from './Components/Cart/Cart'
+import Checkoutform from './Components/checkout/Checkoutform'
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
         <Route path='/refundpolicy' element={<RefundPolicy/>}/>
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="/MyCart" element={<Cart/>} />
+        <Route path="/checkoutform" element={<Checkoutform/>} />
         {/* <Route path="/furniture" element={<Furniture />} />
         <Route path="/furniture/sofas" element={<Sofas />} />
         <Route path="/furniture/beds" element={<Beds />} />

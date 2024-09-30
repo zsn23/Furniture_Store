@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import products from './products';
-import logo1 from '../Logo/m1.png'; 
 import { addToCart } from '../../redux/CartSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -39,7 +38,7 @@ const navigate = useNavigate();
         <div className="col-7 Product_images">
           <div className="d-flex justify-content-center largerPics mt-3">
             <img
-              src={logo1}
+              src={product.image}
               className="ProductLarge_img"
               alt="Product img"
               id="mainImage"
@@ -68,7 +67,7 @@ const navigate = useNavigate();
 
           {/* Price */}
           <div>
-            <h5 className="product-price">{product.description}</h5>
+            <h5 className="product-price"> Rs {product.price}</h5>
           </div>
 
           {/* Colors */}
