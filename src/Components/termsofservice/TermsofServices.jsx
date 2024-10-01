@@ -7,7 +7,7 @@ const TermsofServices = () => {
   
 
 
-      <div className="TOS-container">
+      <div className="TOS-container ">
         <h1 style={{ fontFamily: 'Old Standard TT' }}>Terms & Conditions</h1>
         <p>The following Terms & Conditions apply to Online Sales:</p>
 

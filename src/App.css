@@ -471,7 +471,7 @@ input.searchInput {
 /* Term of policy styling starts */
 .TOSMaincontainer {
   font-family: Questrial, sans-serif !important;
-  background-color: #eff0f5 !important;
+  background-color: #F8F9FA !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,7 +481,7 @@ input.searchInput {
 }
 
 .TOS-container {
-  background-color: #ffffff;
+  background-attachment: #F8F9FA;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -543,7 +543,7 @@ input.searchInput {
 
 .PolicyMaincontainer {
   font-family: 'Questrial', sans-serif !important;
-  background-color: #eff0f5 !important;
+  background-color: #F8F9FA !important;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -553,7 +553,7 @@ input.searchInput {
 }
 
 .policy-container {
-  background-color: #ffffff;
+  background-color: #F8F9FA;
   padding: 40px;
   border-radius: 12px; /* Rounded corners for a modern look */
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -1054,6 +1054,19 @@ font-size: 15px !important;
     margin-top: 1rem;
     text-align: center;
   }
+}
+
+.cart-counter {
+  position: relative;
+  border: 1px solid black;
+  top: -10px;
+  right: -10px;
+  background-color: #84754E;
+  color: white;
+  border-radius: 50px;
+  padding: 0.2em 0.6em;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 /* Cart styling ends */
