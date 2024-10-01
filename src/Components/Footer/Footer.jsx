@@ -43,23 +43,30 @@ const Footer = () => {
               <li><Link to="/contact-us"className='text-decoration-none'>Contact Us</Link></li>
             </ul>
           </div>
+
+
           {/* STAY IN TOUCH Section */}
-          <div className="col-md-4 col-12 mb-4 text-center">
-            <h2 className="font-weight-bold ">STAY IN TOUCH</h2>
-            <p>For the latest news, enter your email address:</p>
-            <div className="input-group mb-3">
-              <input type="text" className="form-control" placeholder="Your email address" />
-              <div className="input-group-append">
-              </div>
-            </div>
-            {/* Social Icons */}
-            <div className="d-flex justify-content-center">
-              <i className="bi bi-facebook mx-2"></i>
-              <i className="bi bi-instagram mx-2"></i>
-              <i className="bi bi-pinterest mx-2"></i>
-              <i className="bi bi-linkedin mx-2"></i>
-            </div>
-          </div>
+<div className="col-md-4 col-12 mb-4 text-md-start text-center d-flex flex-column align-items-md-start align-items-center">
+  <h2 className="font-weight-bold">STAY IN TOUCH</h2>
+  <p>For the latest news, enter your email address:</p>
+  
+  {/* Input Field and Button */}
+  <div className="input-group mb-3" style={{ width: '100%', maxWidth: '600px' }}>
+  <input type="text" className="form-control" placeholder=" Email Address" />
+  <button className="btn btn-outline-secondary" type="submit">
+    <i className="bi bi-arrow-right"></i>
+  </button>
+</div>
+
+
+  {/* Social Icons */}
+  <div className="d-flex justify-content-md-start justify-content-center textBlack">
+    <i className="bi bi-facebook mx-2"></i>
+    <a className="textBlack" href="https://www.instagram.com/inoui_designs/?hl=en"><i className="bi bi-instagram mx-2"></i></a>
+    <i className="bi bi-pinterest mx-2"></i>
+    <i className="bi bi-linkedin mx-2"></i>
+  </div>
+</div>
         </div>
         {/* Footer Bottom */}
         {/* <div className="feedback d-flex justify-content-center align-items-center">
