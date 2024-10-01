@@ -249,9 +249,13 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../Pages/LanguageContext';
 import MegaMenu from '../MegaMenu/MegaMenu_'
+import { useSelector } from 'react-redux';
 
 
 const Header = () => {
+
+  const cartTotalQuantity = useSelector((state) => state.cart.cartTotalQuantity);
+
   const { language, changeLanguage } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
   const [accountHovered, setAccountHovered] = useState(false);
@@ -347,7 +351,11 @@ switch (language) {
               <Link to='/MyCart' className='text-decoration-none '>
                 <small className="d-flex justify-content-center align-items-center MycartBtn  text-dark px-2 py-1 border border-dark rounded-pill hover-underline">
                   MY CART
+                  {cartTotalQuantity > 0 && (
+            <span className="cart-counter">{cartTotalQuantity}</span>
+          )}
                 </small>
+               
               </Link>
             </div>
 

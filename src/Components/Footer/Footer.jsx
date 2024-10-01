@@ -51,7 +51,7 @@ const Footer = () => {
   <p>For the latest news, enter your email address:</p>
   
   {/* Input Field and Button */}
-  <div className="input-group mb-3" style={{ width: '100%', maxWidth: '600px' }}>
+  <div className="input-group mb-3 w-100" style={{ width: '100%', maxWidth: '600px' }}>
   <input type="text" className="form-control" placeholder=" Email Address" />
   <button className="btn btn-outline-secondary" type="submit">
     <i className="bi bi-arrow-right"></i>
