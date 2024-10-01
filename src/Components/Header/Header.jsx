@@ -350,6 +350,14 @@ switch (language) {
                 </small>
               </Link>
             </div>
+
+            <div className="d-flex align-items-center mx-1">
+              <Link to='/Whishlist' className='text-decoration-none '>
+                <small className="d-flex justify-content-center align-items-center MycartBtn  text-dark px-2 py-1 border border-dark rounded-pill hover-underline">
+                My Wishlist
+                </small>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
