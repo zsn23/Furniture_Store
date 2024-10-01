@@ -39,8 +39,7 @@ const Footer = () => {
               <li><Link to="/ordertrack"className='text-decoration-none'>Order Tracking</Link></li>
               <li><a href="#"className='text-decoration-none'>Shipping</a></li>
               <li><a href="#"className='text-decoration-none'>FAQs</a></li>
-              <li><a href="#"className='text-decoration-none'>Email Preferences</a></li>
-
+              <li><Link to="/email-preferences"className='text-decoration-none'>Email Preferences</Link></li>
               <li><Link to="/contact-us"className='text-decoration-none'>Contact Us</Link></li>
             </ul>
           </div>

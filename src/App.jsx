@@ -15,11 +15,12 @@ import Location from './Pages/Location'
 import ContactUs from './Components/Contactus/Contactus'
 import TermsofServices from './Components/termsofservice/TermsofServices'
 import RefundPolicy from './Components/refundPolicy/RefundPolicy'
+
 import ProductDetail from './Components/products detail/ProductDetail'
 import Cart from './Components/Cart/Cart'
 import Checkoutform from './Components/checkout/Checkoutform'
-
-
+import EmailPreferences from './Components/Footer/EmailPreferences'
+import Lamps from './Components/Accessories/Lamps'
 
 
 const App = () => {
@@ -50,6 +51,8 @@ const App = () => {
         <Route path="/accessories/rugs" element={<Rugs />} />
         <Route path="/stockists" element={<Stockists />} />
         <Route path="/about-us" element={<AboutUs />} /> */}
+        <Route path='/email-preferences' element={<EmailPreferences/>}/>
+        <Route path='/accessories/lamps' element={<Lamps/>}/>
     </Routes>
 
     <Footer/>
