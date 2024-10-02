@@ -21,7 +21,6 @@ letter-spacing: 0.20rem;
 
 .hover-underline {
 text-decoration: none; 
-
 }
 
 .hover-underline:hover {
@@ -1070,7 +1069,15 @@ font-size: 15px !important;
   color: #84754E;
   font-weight: bold;
 }
-
+.underline_Availabilty:hover{
+  text-decoration: underline;
+}
+.custom_input {
+  border-color: rgb(159, 147, 147) !important;
+  outline: none !important;  
+  box-shadow: none !important; 
+  border-radius: 2px !important;
+}
 /*-------------------Mega Menu Lamp ends-----------------------*/
 
 
