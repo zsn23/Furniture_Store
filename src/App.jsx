@@ -15,7 +15,8 @@ import Location from './Pages/Location'
 import ContactUs from './Components/Contactus/Contactus'
 import TermsofServices from './Components/termsofservice/TermsofServices'
 import RefundPolicy from './Components/refundPolicy/RefundPolicy'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ProductDetail from './Components/products detail/ProductDetail'
 import Cart from './Components/Cart/Cart'
 import Checkoutform from './Components/checkout/Checkoutform'
@@ -56,6 +57,7 @@ const App = () => {
     </Routes>
 
     <Footer/>
+    <ToastContainer/>
     </>
   )
 }
