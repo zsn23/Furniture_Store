@@ -47,7 +47,6 @@ const Lamps = () => {
     setSortOption(e.target.value);
   };
 
-  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (filterRef.current && !filterRef.current.contains(event.target)) {
@@ -88,22 +87,22 @@ const Lamps = () => {
       </p>
       <h1 className="fontStyling mt-4">Lamps</h1>
 
-      <div className="d-flex align-items-center justify-content-between mt-5">
-        <div className="d-flex align-items-center">
-          <p className="m-0 p-0 text-muted me-2">Filter :</p>
+      <div className="d-flex align-items-center justify-content-between mt-5 flex-wrap">
+        <div className="d-flex align-items-center mb-2">
+          <p className="m-0 p-0 text-muted me-2">Filter: </p>
           <p
-            className="m-0 p-0 underline_Availabilty text-muted me-5"
+            className="m-0 p-0 underline_Availabilty text-muted me-3"
             onClick={toggleFilterCard}
             style={{ cursor: "pointer" }}
           >
-            Availability<i className="bi bi-caret-down-fill caret"></i>
+            Availability <i className="bi bi-caret-down-fill caret"></i>
           </p>
           <p
             className="m-0 p-0 underline_Availabilty text-muted"
             style={{ cursor: "pointer" }}
             onClick={togglePrice}
           >
-            Price<i className="bi bi-caret-down-fill caret"></i>
+            Price <i className="bi bi-caret-down-fill caret"></i>
           </p>
         </div>
    
@@ -164,7 +163,7 @@ const Lamps = () => {
       )}
 
       {showPrice && (
-        <div ref={priceRef} className="card mt-3 border-black" style={{ width: "320px" }}>
+        <div ref={priceRef} className="card mt-3 border-black" style={{ width: "315px" }}>
           <div className="card-body p-3">
             <div className="d-flex justify-content-between align-items-center">
               <p className="card-title m-0 text-muted me-5">
@@ -215,7 +214,7 @@ const Lamps = () => {
                   src={LampPic}
                   className="card-img-top img-fluid border-0"
                   alt="Lamp"
-                  style={{ height: "300px", objectFit: "cover" }}
+                  style={{ height: "300px", objectFit: "cover", maxWidth: "100%" }}
                 />
                 <div className="card-body py-4 mt-3 text-start">
                   <h5 className="card-title a_title">Lamp name</h5>
@@ -231,6 +230,7 @@ const Lamps = () => {
 };
 
 export default Lamps;
+
 
 
 
