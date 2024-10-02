@@ -111,8 +111,8 @@ input.searchInput {
 }
 
 .searchInput::placeholder {
-  color: black !important; /* Change to your desired color */
-  opacity: 1; /* Optional: Make sure the color is fully opaque */
+  color: black !important; 
+  opacity: 1; 
   font-weight: 200 !important;
   font-size: smaller;
 }
@@ -126,6 +126,27 @@ input.searchInput {
     width: 50% !important;
   }
 }
+@media (max-width: 1194px) {
+  .LocationMyaccountHover_____ {
+    font-size: 12px;
+  }
+
+  .MycartBtn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1069px) {
+  .LocationMyaccountHover_____ {
+    font-size: 12px;
+  }
+
+  .MycartBtn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
 
 
 
@@ -1078,6 +1099,7 @@ font-size: 15px !important;
   color: #84754E;
   font-weight: bold;
 }
+
 .underline_Availabilty:hover{
   text-decoration: underline;
 }
@@ -1087,6 +1109,15 @@ font-size: 15px !important;
   box-shadow: none !important; 
   border-radius: 2px !important;
 }
+@media (max-width: 425px) {
+  .card {
+    width: 95% !important; /* Full width on smaller screens */
+    left: 0;    /* Align to the left */
+    font-size: 12px;
+  }
+}
+
+
 /*-------------------Mega Menu Lamp ends-----------------------*/
 
 
