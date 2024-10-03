@@ -8,7 +8,20 @@
 font-family: 'Arial', sans-serif;  
 letter-spacing: 0.20rem;
 }
+@media (max-width: 388px) {
+  .LocationLogo{
+    display: block; 
+    display: none;
+  }
 
+  
+}
+@media (min-width: 768px) and (max-width: 778px) {
+  .LocationLogo{
+    display: block; 
+    display: none;
+  }
+}
 @media (max-width: 375px) {
   .fontStyling02 {
     font-size: 1.5rem;
@@ -146,7 +159,13 @@ input.searchInput {
     font-size: 12px;
   }
 }
-
+@media (max-width : 350px) {
+  .HandleHeading{
+    font-size: 24px;
+    margin-left: 35px;
+    padding-bottom: 2px;
+  }
+}
 
 
 
@@ -155,7 +174,13 @@ input.searchInput {
 .mega-menu {
   background-color: #F8F9FA;
 }
-
+@media (max-width:768px) and (min-width:767px) {
+  .mega-menu {
+    background-color: #F8F9FA;
+    display: block !important;
+  }
+  
+}
 
 .menu-items {
   display: flex;
@@ -271,14 +296,25 @@ input.searchInput {
 
 
 /* Media Queries */
-@media (max-width:769px) {
+@media (max-width:768px) {
   .navbar__ {
-    display: none ;
+    display: none !important ;
     background-color: transparent !important;
   }
   .MegaMainDiv{
+    display: block !important;
     position: absolute;
   }
+  .btn-transparent {
+    display: block !important;
+  }
+  @media(min-width:768px) and (max-width:769px) {
+  #megaMenuOffcanvas{
+display: block !important;
+  }
+}
+
+
 }
 
 @media (min-width: 992px) {
@@ -1111,14 +1147,32 @@ font-size: 15px !important;
 }
 @media (max-width: 425px) {
   .card {
-    width: 95% !important; /* Full width on smaller screens */
-    left: 0;    /* Align to the left */
+    width: 95% !important; 
+    left: 0;    
     font-size: 12px;
   }
 }
-
-
 /*-------------------Mega Menu Lamp ends-----------------------*/
+/* 
+*/
+.custom_pagination{
+  outline: none !important;  
+  box-shadow: none !important; 
+  border-radius: 2px !important;
+  
+
+}
+
+@media (max-width: 884px) and (min-width: 768px) {
+  .product-card {
+    max-width: 100%;  
+    margin: auto;    
+  }
+  .card-img-top {
+    height: 400px; 
+    object-fit: cover;
+  }
+}
 
 
 
