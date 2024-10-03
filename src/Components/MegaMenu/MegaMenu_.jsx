@@ -309,6 +309,13 @@ const MegaMenu = () => {
     </h2>
 
    
+    <div id="collapseFurniture" className={`accordion-collapse collapse ${activeAccordion === 'furniture' ? 'show' : ''}`} aria-labelledby="headingFurniture" data-bs-parent="#accordionMenu">
+        <div className="accordion-body">
+            <Link to="/furniture/sofas" className='p-2' onClick={closeAllAccordions}>Sofas</Link><br />
+            <Link to="/furniture/beds" className='p-2' onClick={closeAllAccordions}>Beds</Link><br />
+            <Link to="/furniture/tables" className='p-2' onClick={closeAllAccordions}>Tables</Link>
+        </div>
+    </div>
 </li>
 
 <li className="accordion-item">
