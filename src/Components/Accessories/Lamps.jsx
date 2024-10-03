@@ -11,17 +11,42 @@ const Lamps = () => {
   const [toPrice, setToPrice] = useState('');
   const [sortOption, setSortOption] = useState('Relevance');
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+
   const filterRef = useRef(null);
   const priceRef = useRef(null);
 
-  const toggleFilterCard = () => {
-    setShowFilter((prev) => !prev);
-    setShowPrice(false); 
+  // List of 12 lamps for testing
+  const lamps = [...Array(12)].map((_, index) => ({
+    id: index + 1,
+    name: `Lamp name ${index + 1}`,
+    price: Math.floor(Math.random() * 20000) + 1000,
+  }));
+
+  // Calculate the highest price among lamps
+  const highestPrice = Math.max(...lamps.map(lamp => lamp.price));
+
+  const indexOfLastLamp = currentPage * itemsPerPage;
+  const indexOfFirstLamp = indexOfLastLamp - itemsPerPage;
+  const currentLamps = lamps.slice(indexOfFirstLamp, indexOfLastLamp);
+
+  const totalPages = Math.ceil(lamps.length / itemsPerPage);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
+  // Toggle the Availability filter
+  const toggleFilterCard = () => {
+    setShowFilter((prev) => !prev);
+    setShowPrice(false);
+  };
+
+  // Toggle the Price filter
   const togglePrice = () => {
     setShowPrice((prev) => !prev);
-    setShowFilter(false); 
+    setShowFilter(false);
   };
 
   const resetFilters = () => {
@@ -47,6 +72,7 @@ const Lamps = () => {
     setSortOption(e.target.value);
   };
 
+  // Close the filter cards if clicking outside of them
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (filterRef.current && !filterRef.current.contains(event.target)) {
@@ -62,8 +88,11 @@ const Lamps = () => {
     };
   }, []);
 
+  // Count selected filters
+  const selectedCount = Number(inStock) + Number(outOfStock);
+
   return (
-    <div className="container">
+    <div className="container-fluid">
       <p className="mt-4">
         <Link
           to="/"
@@ -117,16 +146,16 @@ const Lamps = () => {
             <option value="Relevance">Relevance</option>
             <option value="PriceLowToHigh">Price: Low to High</option>
             <option value="PriceHighToLow">Price: High to Low</option>
-            <option value="Newest">Newest Arrivals</option>
           </select>
         </div>
       </div>
 
+      {/* Availability Filter Card */}
       {showFilter && (
         <div ref={filterRef} className="card mt-3 border-black" style={{ width: "300px" }}>
           <div className="card-body p-3">
             <div className="d-flex justify-content-between align-items-center">
-              <p className="card-title m-0 text-muted">0 selected</p>
+              <p className="card-title m-0 text-muted">{selectedCount} selected</p>
               <button
                 className="btn p-0 underline_Availabilty text-muted"
                 onClick={resetFilters}
@@ -162,12 +191,13 @@ const Lamps = () => {
         </div>
       )}
 
+      {/* Price Filter Card */}
       {showPrice && (
-        <div ref={priceRef} className="card mt-3 border-black" style={{ width: "315px" }}>
+        <div ref={priceRef} className="card mt-3 border-black" style={{ width: "325px" }}>
           <div className="card-body p-3">
             <div className="d-flex justify-content-between align-items-center">
               <p className="card-title m-0 text-muted me-5">
-                The highest price is Rs.3600
+                <span>The highest price is Rs.{highestPrice}</span>
               </p>
               <button
                 className="btn p-0 underline_Availabilty text-muted"
@@ -179,7 +209,7 @@ const Lamps = () => {
             </div>
             <hr style={{ border: "1px solid black", width: "100%" }} />
             <div style={{ display: 'flex', gap: '20px'}}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
                 <span className="me-1">Rs</span>
                 <input
                   type="number"
@@ -205,31 +235,71 @@ const Lamps = () => {
         </div>
       )}
 
-      <div className="row row-cols-1 row-cols-md-4 g-4 mt-1">
-        {[...Array(12)].map((_, index) => (
-          <div className="col" key={index}>
-            <div className="card card_ h-100 shadow-sm product-card border-1">
-              <Link className="text-dark a_" to="/lamp-details">
-                <img
-                  src={LampPic}
-                  className="card-img-top img-fluid border-0"
-                  alt="Lamp"
-                  style={{ height: "300px", objectFit: "cover", maxWidth: "100%" }}
-                />
-                <div className="card-body py-4 mt-3 text-start">
-                  <h5 className="card-title a_title">Lamp name</h5>
-                  <p className="card-text a_price">Rs.15,000.00 PKR</p>
-                </div>
-              </Link>
+      {/* Products */}
+      
+{/* Products */}
+<div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-1">
+  {currentLamps.length > 0 ? (
+    currentLamps.map((lamp) => (
+      <div className="col" key={lamp.id}>
+        <div className="card h-100 shadow-sm product-card border-1">
+          <Link className="text-dark a_" to={`/accessories/lamps/${lamp.id}`}>
+            <img
+              src={LampPic}
+              className="card-img-top img-fluid border-0"
+              alt="Lamp"
+              style={{ height: "400px", objectFit: "cover", width: "100%" }} // Ensure full width
+            />
+            <div className="card-body py-4 mt-3 text-start">
+              <h5 className="card-title a_title">{lamp.name}</h5>
+              <p className="card-text a_price">Rs.{lamp.price}.00 PKR</p>
             </div>
-          </div>
-        ))}
+          </Link>
+        </div>
+      </div>
+    ))
+  ) : (
+    <div className="col-12 text-center mt-4">
+      <p className="text-muted">No lamps found matching your criteria.</p>
+    </div>
+  )}
+</div>
+
+
+
+      {/* Pagination */}
+      <div className="d-flex justify-content-center mt-5">
+        <nav>
+          <ul className="pagination ">
+            <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+              <button className="page-link custom_pagination" onClick={() => handlePageChange(currentPage - 1)}>
+                Previous
+              </button>
+            </li>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <li key={index + 1} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
+                <button className="page-link custom_pagination" onClick={() => handlePageChange(index + 1)}>
+                  {index + 1}
+                </button>
+              </li>
+            ))}
+            <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+              <button className="page-link custom_pagination" onClick={() => handlePageChange(currentPage + 1)}>
+                Next
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   );
 };
 
 export default Lamps;
+
+
+
+
 
 
 /*-----------------------------------------------Page Lamp Card zindex code------------------------------
