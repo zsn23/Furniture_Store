@@ -34,6 +34,7 @@ const Lamps = () => {
   const totalPages = Math.ceil(lamps.length / itemsPerPage);
 
   const handlePageChange = (pageNumber) => {
+    
     setCurrentPage(pageNumber);
   };
 
@@ -277,8 +278,8 @@ const Lamps = () => {
               </button>
             </li>
             {Array.from({ length: totalPages }, (_, index) => (
-              <li key={index + 1} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
-                <button className="page-link custom_pagination" onClick={() => handlePageChange(index + 1)}>
+              <li key={index + 1}  className={`page-item ${currentPage === index + 1 ? 'active' : ''}`} >
+                <button className="page-link custom_pagination text-dark bg-transparent custom_border" onClick={() => handlePageChange(index + 1)}>
                   {index + 1}
                 </button>
               </li>
