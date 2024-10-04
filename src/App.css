@@ -337,9 +337,9 @@ display: block !important;
 
 }
 
-@media (max-width:426px) {
+@media (max-width:768px) {
   .btn-transparent{
-    top:-179px !important;
+    top:-176px !important;
     left: 0px !important;
   }
 
