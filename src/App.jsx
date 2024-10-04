@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer'
 import TopNavbar from './Components/Nabar/TopNavbar'
@@ -42,8 +42,8 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="/MyCart" element={<Cart/>} />
         <Route path="/checkoutform" element={<Checkoutform/>} />
+        {/* <Route path="/furniture/sofas" element={<Sofas />} /> */}
         {/* <Route path="/furniture" element={<Furniture />} />
-        <Route path="/furniture/sofas" element={<Sofas />} />
         <Route path="/furniture/beds" element={<Beds />} />
         <Route path="/furniture/tables" element={<Tables />} />
         <Route path="/accessories" element={<Accessories />} />
@@ -53,7 +53,7 @@ const App = () => {
         <Route path="/stockists" element={<Stockists />} />
         <Route path="/about-us" element={<AboutUs />} /> */}
         <Route path='/email-preferences' element={<EmailPreferences/>}/>
-        <Route path='/accessories/lamps' element={<Lamps/>}/>
+        <Route path='/accessories/lamps' Component={<Lamps/>}/>
     </Routes>
 
     <Footer/>
