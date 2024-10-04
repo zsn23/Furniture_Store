@@ -8,7 +8,20 @@
 font-family: 'Arial', sans-serif;  
 letter-spacing: 0.20rem;
 }
+@media (max-width: 388px) {
+  .LocationLogo{
+    display: block; 
+    display: none;
+  }
 
+  
+}
+@media (min-width: 768px) and (max-width: 778px) {
+  .LocationLogo{
+    display: block; 
+    display: none;
+  }
+}
 @media (max-width: 375px) {
   .fontStyling02 {
     font-size: 1.5rem;
@@ -21,7 +34,6 @@ letter-spacing: 0.20rem;
 
 .hover-underline {
 text-decoration: none; 
-
 }
 
 .hover-underline:hover {
@@ -112,8 +124,8 @@ input.searchInput {
 }
 
 .searchInput::placeholder {
-  color: black !important; /* Change to your desired color */
-  opacity: 1; /* Optional: Make sure the color is fully opaque */
+  color: black !important; 
+  opacity: 1; 
   font-weight: 200 !important;
   font-size: smaller;
 }
@@ -127,6 +139,33 @@ input.searchInput {
     width: 50% !important;
   }
 }
+@media (max-width: 1194px) {
+  .LocationMyaccountHover_____ {
+    font-size: 12px;
+  }
+
+  .MycartBtn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1069px) {
+  .LocationMyaccountHover_____ {
+    font-size: 12px;
+  }
+
+  .MycartBtn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width : 350px) {
+  .HandleHeading{
+    font-size: 24px;
+    margin-left: 35px;
+    padding-bottom: 2px;
+  }
+}
 
 
 
@@ -135,7 +174,13 @@ input.searchInput {
 .mega-menu {
   background-color: #F8F9FA;
 }
-
+@media (max-width:768px) and (min-width:767px) {
+  .mega-menu {
+    background-color: #F8F9FA;
+    display: block !important;
+  }
+  
+}
 
 .menu-items {
   display: flex;
@@ -180,10 +225,6 @@ input.searchInput {
   border-bottom: 1px solid #000 !important;
   font-weight: bold !important;
 
-}
-
-.menu-items a:hover {
-  font-size: 20px;
 }
 
 .dropdown-content {
@@ -255,14 +296,25 @@ input.searchInput {
 
 
 /* Media Queries */
-@media (max-width:769px) {
+@media (max-width:768px) {
   .navbar__ {
-    display: none ;
+    display: none !important ;
     background-color: transparent !important;
   }
   .MegaMainDiv{
+    display: block !important;
     position: absolute;
   }
+  .btn-transparent {
+    display: block !important;
+  }
+  @media(min-width:768px) and (max-width:769px) {
+  #megaMenuOffcanvas{
+display: block !important;
+  }
+}
+
+
 }
 
 @media (min-width: 992px) {
@@ -285,9 +337,9 @@ input.searchInput {
 
 }
 
-@media (max-width:426px) {
+@media (max-width:768px) {
   .btn-transparent{
-    top:-179px !important;
+    top:-176px !important;
     left: 0px !important;
   }
 
@@ -1084,7 +1136,44 @@ font-size: 15px !important;
   font-weight: bold;
 }
 
+.underline_Availabilty:hover{
+  text-decoration: underline;
+}
+.custom_input {
+  border-color: rgb(159, 147, 147) !important;
+  outline: none !important;  
+  box-shadow: none !important; 
+  border-radius: 2px !important;
+}
+@media (max-width: 425px) {
+  .card {
+    width: 95% !important; 
+    left: 0;    
+    font-size: 12px;
+  }
+}
+
+.custom_pagination{
+  outline: none !important;  
+  box-shadow: none !important; 
+  border-radius: 2px !important;
+
+}
+
+@media (max-width: 884px) and (min-width: 768px) {
+  .product-card {
+    max-width: 100%;  
+    margin: auto;    
+  }
+  .card-img-top {
+    height: 400px; 
+    object-fit: cover;
+  }
+}
+
 /*-------------------Mega Menu Lamp ends-----------------------*/
+
+
 
 
 
