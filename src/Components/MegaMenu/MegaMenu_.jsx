@@ -377,11 +377,32 @@ const MegaMenu = () => {
                                 <div id="collapseCustomizeFurniture" className={`accordion-collapse collapse ${activeAccordion === 'customizeFurniture' ? 'show' : ''}`} aria-labelledby="headingCustomizeFurniture" data-bs-parent="#accordionMenu">
                                     <div className="accordion-body">
                                         <Link to="/accessories/lamps" onClick={handleLinkClick} className='p-2'>Lamps</Link><br />
-                                        <Link to="/furniture/vases" onClick={handleLinkClick} className='p-2'>Vases</Link><br />
-                                        <Link to="/furniture/rugs" onClick={handleLinkClick} className='p-2'>Rugs</Link>
+                                        <Link to="/accessories/vases" onClick={handleLinkClick} className='p-2'>Vases</Link><br />
+                                        <Link to="/accessories/rugs" onClick={handleLinkClick} className='p-2'>Rugs</Link>
                                     </div>
                                 </div>
                             </li>
+                            <li className="accordion-item">
+    <h2 className="accordion-header" id="headingAccessories">
+        <Link 
+            onClick={(e) => {
+                e.stopPropagation();
+                handleAccordionToggle('accessories');
+            }}
+            className='accordion-button text-decoration-none'
+        >
+            Accessories <i className="bi bi-caret-down-fill caret"></i>
+        </Link>
+    </h2>
+    <div id="collapseAccessories" className={`accordion-collapse collapse ${activeAccordion === 'accessories' ? 'show' : ''}`} aria-labelledby="headingAccessories" data-bs-parent="#accordionMenu">
+        <div className="accordion-body">
+            <Link to="/accessories/lamps" onClick={handleLinkClick} className='p-2'>Lamps</Link><br />
+            <Link to="/accessories/vases" onClick={handleLinkClick} className='p-2'>Vases</Link><br />
+            <Link to="/accessories/rugs" onClick={handleLinkClick} className='p-2'>Rugs</Link>
+        </div>
+    </div>
+</li>
+
 
                             <li onClick={handleLinkClick}><Link to="/contact-us" className={isActive("/contact-us") ? "active" : ""}>Contact Us</Link></li>
                             <li onClick={handleLinkClick}><Link to="/about-us" className={isActive("/about-us") ? "active" : ""}>About Us</Link></li>
