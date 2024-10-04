@@ -115,6 +115,43 @@
 //                                         <Link to="/furniture/tables" data-bs-dismiss="offcanvas" className='p-2'>Tables</Link>
 //                                     </div>
 //                                 </div>
+//                                 {/* <div className="accordion-body">
+//     <Link
+//         to="/furniture/sofas"
+//         onClick={() => {
+//             const offcanvasElement = document.getElementById('megaMenuOffcanvas');
+//             const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+//             offcanvas.hide();
+//         }}
+//         className='p-2'
+//     >
+//         Sofas
+//     </Link><br />
+//     <Link
+//         to="/furniture/beds"
+//         onClick={() => {
+//             const offcanvasElement = document.getElementById('megaMenuOffcanvas');
+//             const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+//             offcanvas.hide();
+//         }}
+//         className='p-2'
+//     >
+//         Beds
+//     </Link><br />
+//     <Link
+//         to="/furniture/tables"
+//         onClick={() => {
+//             const offcanvasElement = document.getElementById('megaMenuOffcanvas');
+//             const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+//             offcanvas.hide();
+//         }}
+//         className='p-2'
+//     >
+//         Tables
+//     </Link>
+// </div> */}
+
+                                
 //                             </li>
 
 
@@ -196,9 +233,6 @@
 //-----------------------------------------------Zeeshan code ends--------------------------
 
 
-
-//-------------------------------------------Testing code start-------------------------------
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -208,6 +242,7 @@ const MegaMenu = () => {
     const [CustomizefurnitureDropdown, setCustomizeFurnitureDropdown] = useState(false);
 
     const [activeAccordion, setActiveAccordion] = useState(null); // Track active accordion
+    const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false); // State to control offcanvas
     const location = useLocation(); // Get the current location
 
     const isActive = (path) => location.pathname === path; // Check if the link is active
@@ -218,6 +253,14 @@ const MegaMenu = () => {
 
     const handleAccordionToggle = (accordion) => {
         setActiveAccordion(activeAccordion === accordion ? null : accordion); // Toggle accordion
+    };
+
+    const handleOffcanvasClose = () => {
+        setIsOffcanvasOpen(false); // Close offcanvas
+    };
+
+    const handleLinkClick = () => {
+        setIsOffcanvasOpen(false); // Close offcanvas when a link is clicked
     };
 
     return (
@@ -275,112 +318,75 @@ const MegaMenu = () => {
             </nav>
 
             {/* Hamburger Button */}
-            <button className="btn btn-transparent fs-2 d-md-none" style={{ position: 'relative', top: '-183px', left: '0px' }} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+            <button
+                className="btn btn-transparent fs-2 d-md-none"
+                style={{ position: 'relative', top: '-183px', left: '0px' }}
+                type="button"
+                onClick={() => setIsOffcanvasOpen(true)} // Open offcanvas
+            >
                 <i className="fa fa-thin fa-bars"></i>
             </button>
 
             {/* Off-canvas Menu */}
-            <div className="offcanvas offcanvas-start d-md-none" tabIndex="-1" id="megaMenuOffcanvas" aria-labelledby="megaMenuOffcanvasLabel" onClick={(e) => e.stopPropagation()}>
+            <div className={`offcanvas offcanvas-start d-md-none ${isOffcanvasOpen ? 'show' : ''}`} style={{ visibility: isOffcanvasOpen ? 'visible' : 'hidden' }} tabIndex="-1" id="megaMenuOffcanvas">
                 <div className="offcanvas-header">
                     <h5 className="offcanvas-title fs-1 fw-bolder" id="">Menu</h5>
-                    <button type="button" className="btn-close text-reset " data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeAllAccordions}></button>
+                    <button type="button" className="btn-close text-reset" aria-label="Close" onClick={handleOffcanvasClose}></button>
                 </div>
                 <div className="offcanvas-body p-2">
                     <nav className="mega-menu" id="accordionMenu">
                         <ul className="menu-items menu-items_ flex-column ">
-                            <li data-bs-dismiss="offcanvas">
+                            <li onClick={handleLinkClick}>
                                 <Link to="/" className={isActive("/") ? "active" : ""}>Home</Link>
                             </li>
 
-
-                            
                             <li className="accordion-item">
-    <h2 className="accordion-header" id="headingFurniture">
-        <Link 
-            onClick={(e) => {
-                // This should toggle the accordion
-                handleAccordionToggle('furniture');
-            }}
-            className='accordion-button text-decoration-none' 
-            style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-        >
-            Furniture <i className="bi bi-caret-down-fill caret"></i>
-        </Link>
-    </h2>
+                                <h2 className="accordion-header" id="headingFurniture">
+                                    <Link 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleAccordionToggle('furniture');
+                                        }}
+                                        className='accordion-button text-decoration-none'
+                                    >
+                                        Furniture <i className="bi bi-caret-down-fill caret"></i>
+                                    </Link>
+                                </h2>
 
-   
-    <div id="collapseFurniture" className={`accordion-collapse collapse ${activeAccordion === 'furniture' ? 'show' : ''}`} aria-labelledby="headingFurniture" data-bs-parent="#accordionMenu">
-        <div className="accordion-body">
-            <Link to="/furniture/sofas" className='p-2' onClick={closeAllAccordions}>Sofas</Link><br />
-            <Link to="/furniture/beds" className='p-2' onClick={closeAllAccordions}>Beds</Link><br />
-            <Link to="/furniture/tables" className='p-2' onClick={closeAllAccordions}>Tables</Link>
-        </div>
-    </div>
-</li>
+                                <div id="collapseFurniture" className={`accordion-collapse collapse ${activeAccordion === 'furniture' ? 'show' : ''}`} aria-labelledby="headingFurniture" data-bs-parent="#accordionMenu">
+                                    <div className="accordion-body">
+                                        <Link to="/furniture/sofas" onClick={handleLinkClick} className='p-2'>Sofas</Link><br />
+                                        <Link to="/furniture/beds" onClick={handleLinkClick} className='p-2'>Beds</Link><br />
+                                        <Link to="/furniture/tables" onClick={handleLinkClick} className='p-2'>Tables</Link>
+                                    </div>
+                                </div>
+                            </li>
 
-<li className="accordion-item">
-    <h2 className="accordion-header" id="headingCustomizeFurniture">
-        <Link 
-            onClick={(e) => {
-                handleAccordionToggle('customizeFurniture');
-            }}
-            className='accordion-button text-decoration-none'
-            style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-        >
-            Customize Furniture <i className="bi-fill bi-caret-down-fill caret"></i>
-        </Link>
-    </h2>
-    <div id="collapseCustomizeFurniture" className={`accordion-collapse collapse ${activeAccordion === 'customizeFurniture' ? 'show' : ''}`} aria-labelledby="headingCustomizeFurniture" data-bs-parent="#accordionMenu">
-        <div className="accordion-body">
-            <Link to="/accessories/lamps" className='p-2' onClick={closeAllAccordions}>Lamps</Link><br />
-            <Link to="/furniture/vases" className='p-2' onClick={closeAllAccordions}>Vases</Link><br />
-            <Link to="/furniture/rugs" className='p-2' onClick={closeAllAccordions}>Rugs</Link>
-        </div>
-    </div>
-</li>
+                            <li className="accordion-item">
+                                <h2 className="accordion-header" id="headingCustomizeFurniture">
+                                    <Link 
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            handleAccordionToggle('customizeFurniture');
+                                        }}
+                                        className='accordion-button text-decoration-none'
+                                    >
+                                        Customize Furniture <i className="bi bi-caret-down-fill caret"></i>
+                                    </Link>
+                                </h2>
+                                <div id="collapseCustomizeFurniture" className={`accordion-collapse collapse ${activeAccordion === 'customizeFurniture' ? 'show' : ''}`} aria-labelledby="headingCustomizeFurniture" data-bs-parent="#accordionMenu">
+                                    <div className="accordion-body">
+                                        <Link to="/accessories/lamps" onClick={handleLinkClick} className='p-2'>Lamps</Link><br />
+                                        <Link to="/furniture/vases" onClick={handleLinkClick} className='p-2'>Vases</Link><br />
+                                        <Link to="/furniture/rugs" onClick={handleLinkClick} className='p-2'>Rugs</Link>
+                                    </div>
+                                </div>
+                            </li>
 
-<li className="accordion-item">
-    <h2 className="accordion-header" id="headingAccessories">
-        <Link 
-            onClick={(e) => {
-                handleAccordionToggle('accessories');
-            }}
-            className='accordion-button text-decoration-none' 
-            style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-        >
-            Accessories <i className="bi-fill bi-caret-down-fill caret"></i>
-        </Link>
-    </h2>
-    <div id="collapseAccessories" className={`accordion-collapse collapse ${activeAccordion === 'accessories' ? 'show' : ''}`} aria-labelledby="headingAccessories" data-bs-parent="#accordionMenu">
-        <div className="accordion-body">
-            <Link to="/accessories/lamps" className='p-2' onClick={closeAllAccordions}>Lamps</Link><br />
-            <Link to="/accessories/vases" className='p-2' onClick={closeAllAccordions}>Vases</Link><br />
-            <Link to="/accessories/rugs" className='p-2' onClick={closeAllAccordions}>Rugs</Link>
-        </div>
-    </div>
-</li>
-
-                            <li data-bs-dismiss="offcanvas"><Link to="/contact-us" className={isActive("/contact-us") ? "active" : ""}>Contact Us</Link></li>
-                            <li data-bs-dismiss="offcanvas"><Link to="/about-us" className={isActive("/about-us") ? "active" : ""}>About Us</Link></li>
+                            <li onClick={handleLinkClick}><Link to="/contact-us" className={isActive("/contact-us") ? "active" : ""}>Contact Us</Link></li>
+                            <li onClick={handleLinkClick}><Link to="/about-us" className={isActive("/about-us") ? "active" : ""}>About Us</Link></li>
                         </ul>
                     </nav>
-                </div>
-
-                <div className='offcanvas-footer border-top p-3' style={{ backgroundColor: '#555B4A' }}>
-                    <div className="d-flex justify-content-start">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-facebook mx-2 text-light"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-instagram mx-2 text-light"></i>
-                        </a>
-                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-pinterest mx-2 text-light"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                            <i className="bi bi-linkedin mx-2 text-light"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -388,6 +394,198 @@ const MegaMenu = () => {
 };
 
 export default MegaMenu;
+
+//-------------------------------------------Testing code start-------------------------------
+
+// import { useState } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+
+// const MegaMenu = () => {
+//     const [furnitureDropdown, setFurnitureDropdown] = useState(false);
+//     const [accessoriesDropdown, setAccessoriesDropdown] = useState(false);
+//     const [CustomizefurnitureDropdown, setCustomizeFurnitureDropdown] = useState(false);
+
+//     const [activeAccordion, setActiveAccordion] = useState(null); // Track active accordion
+//     const location = useLocation(); // Get the current location
+
+//     const isActive = (path) => location.pathname === path; // Check if the link is active
+
+//     const closeAllAccordions = () => {
+//         setActiveAccordion(null); // Close all accordions
+//     };
+
+//     const handleAccordionToggle = (accordion) => {
+//         setActiveAccordion(activeAccordion === accordion ? null : accordion); // Toggle accordion
+//     };
+
+//     return (
+//         <div className='mt-1 MegaMainDiv h-0' onClick={closeAllAccordions}>
+//             <nav className="mega-menu border-top border-bottom navbar__ p-3 justify-content-center">
+//                 <ul className="menu-items">
+//                     <li>
+//                         <Link to="/" className={isActive("/") ? "active" : ""}>HOME</Link>
+//                     </li>
+//                     <li 
+//                         className="dropdown"
+//                         onMouseEnter={() => setFurnitureDropdown(true)}
+//                         onMouseLeave={() => setFurnitureDropdown(false)}
+//                     >
+//                         <Link>FURNITURE <i className="bi bi-caret-up-fill caret"></i></Link>
+//                         {furnitureDropdown && (
+//                             <div className="dropdown-content">
+//                                 <Link to="/furniture/sofas">Sofas</Link>
+//                                 <Link to="/furniture/beds">Beds</Link>
+//                                 <Link to="/furniture/tables">Tables</Link>
+//                             </div>
+//                         )}
+//                     </li>
+//                     <li 
+//                         className="dropdown"
+//                         onMouseEnter={() => setCustomizeFurnitureDropdown(true)}
+//                         onMouseLeave={() => setCustomizeFurnitureDropdown(false)}
+//                     >
+//                         <Link >CUSTOMIZE FURNITURE <i className="bi bi-caret-up-fill caret"></i></Link>
+//                         {CustomizefurnitureDropdown && (
+//                             <div className="dropdown-content">
+//                                 <Link to="/furniture/sofas">Sofas</Link>
+//                                 <Link to="/furniture/beds">Beds</Link>
+//                                 <Link to="/furniture/tables">Tables</Link>
+//                             </div>
+//                         )}
+//                     </li>
+//                     <li 
+//                         className="dropdown"
+//                         onMouseEnter={() => setAccessoriesDropdown(true)}
+//                         onMouseLeave={() => setAccessoriesDropdown(false)}
+//                     >
+//                         <Link >ACCESSORIES <i className="bi bi-caret-up-fill caret"></i></Link>
+//                         {accessoriesDropdown && (
+//                             <div className="dropdown-content">
+//                                 <Link to="/accessories/lamps" >Lamps</Link>
+//                                 <Link to="/accessories/vases">Vases</Link>
+//                                 <Link to="/accessories/rugs">Rugs</Link>
+//                             </div>
+//                         )}
+//                     </li>
+//                     <li><Link to="/contact-us" className={isActive("/contact-us") ? "active" : ""}>CONTACT US</Link></li>
+//                     <li><Link to="/about-us" className={isActive("/about-us") ? "active" : ""}>ABOUT US</Link></li>
+//                 </ul>
+//             </nav>
+
+//             {/* Hamburger Button */}
+//             <button className="btn btn-transparent fs-2 d-md-none" style={{ position: 'relative', top: '-183px', left: '0px' }} type="button" data-bs-toggle="offcanvas" data-bs-target="#megaMenuOffcanvas" aria-controls="megaMenuOffcanvas">
+//                 <i className="fa fa-thin fa-bars"></i>
+//             </button>
+
+//             {/* Off-canvas Menu */}
+//             <div className="offcanvas offcanvas-start d-md-none" tabIndex="-1" id="megaMenuOffcanvas" aria-labelledby="megaMenuOffcanvasLabel" onClick={(e) => e.stopPropagation()}>
+//                 <div className="offcanvas-header">
+//                     <h5 className="offcanvas-title fs-1 fw-bolder" id="">Menu</h5>
+//                     <button type="button" className="btn-close text-reset " data-bs-dismiss="offcanvas" aria-label="Close" onClick={closeAllAccordions}></button>
+//                 </div>
+//                 <div className="offcanvas-body p-2">
+//                     <nav className="mega-menu" id="accordionMenu">
+//                         <ul className="menu-items menu-items_ flex-column ">
+//                             <li data-bs-dismiss="offcanvas">
+//                                 <Link to="/" className={isActive("/") ? "active" : ""}>Home</Link>
+//                             </li>
+
+
+                            
+//                             <li className="accordion-item">
+//     <h2 className="accordion-header" id="headingFurniture">
+//         <Link 
+//             onClick={(e) => {
+//                 // This should toggle the accordion
+//                 handleAccordionToggle('furniture');
+//             }}
+//             className='accordion-button text-decoration-none' 
+//             style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+//         >
+//             Furniture <i className="bi bi-caret-down-fill caret"></i>
+//         </Link>
+//     </h2>
+
+   
+//     <div id="collapseFurniture" className={`accordion-collapse collapse ${activeAccordion === 'furniture' ? 'show' : ''}`} aria-labelledby="headingFurniture" data-bs-parent="#accordionMenu">
+//         <div className="accordion-body">
+//             <Link to="/furniture/sofas" className='p-2' onClick={closeAllAccordions}>Sofas</Link><br />
+//             <Link to="/furniture/beds" className='p-2' onClick={closeAllAccordions}>Beds</Link><br />
+//             <Link to="/furniture/tables" className='p-2' onClick={closeAllAccordions}>Tables</Link>
+//         </div>
+//     </div>
+// </li>
+
+// <li className="accordion-item">
+//     <h2 className="accordion-header" id="headingCustomizeFurniture">
+//         <Link 
+//             onClick={(e) => {
+//                 handleAccordionToggle('customizeFurniture');
+//             }}
+//             className='accordion-button text-decoration-none'
+//             style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+//         >
+//             Customize Furniture <i className="bi-fill bi-caret-down-fill caret"></i>
+//         </Link>
+//     </h2>
+//     <div id="collapseCustomizeFurniture" className={`accordion-collapse collapse ${activeAccordion === 'customizeFurniture' ? 'show' : ''}`} aria-labelledby="headingCustomizeFurniture" data-bs-parent="#accordionMenu">
+//         <div className="accordion-body">
+//             <Link to="/accessories/lamps" className='p-2' onClick={closeAllAccordions}>Lamps</Link><br />
+//             <Link to="/furniture/vases" className='p-2' onClick={closeAllAccordions}>Vases</Link><br />
+//             <Link to="/furniture/rugs" className='p-2' onClick={closeAllAccordions}>Rugs</Link>
+//         </div>
+//     </div>
+// </li>
+
+// <li className="accordion-item">
+//     <h2 className="accordion-header" id="headingAccessories">
+//         <Link 
+//             onClick={(e) => {
+//                 handleAccordionToggle('accessories');
+//             }}
+//             className='accordion-button text-decoration-none' 
+//             style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+//         >
+//             Accessories <i className="bi-fill bi-caret-down-fill caret"></i>
+//         </Link>
+//     </h2>
+//     <div id="collapseAccessories" className={`accordion-collapse collapse ${activeAccordion === 'accessories' ? 'show' : ''}`} aria-labelledby="headingAccessories" data-bs-parent="#accordionMenu">
+//         <div className="accordion-body">
+//             <Link to="/accessories/lamps" className='p-2' onClick={closeAllAccordions}>Lamps</Link><br />
+//             <Link to="/accessories/vases" className='p-2' onClick={closeAllAccordions}>Vases</Link><br />
+//             <Link to="/accessories/rugs" className='p-2' onClick={closeAllAccordions}>Rugs</Link>
+//         </div>
+//     </div>
+// </li>
+
+//                             <li data-bs-dismiss="offcanvas"><Link to="/contact-us" className={isActive("/contact-us") ? "active" : ""}>Contact Us</Link></li>
+//                             <li data-bs-dismiss="offcanvas"><Link to="/about-us" className={isActive("/about-us") ? "active" : ""}>About Us</Link></li>
+//                         </ul>
+//                     </nav>
+//                 </div>
+
+//                 <div className='offcanvas-footer border-top p-3' style={{ backgroundColor: '#555B4A' }}>
+//                     <div className="d-flex justify-content-start">
+//                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+//                             <i className="bi bi-facebook mx-2 text-light"></i>
+//                         </a>
+//                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+//                             <i className="bi bi-instagram mx-2 text-light"></i>
+//                         </a>
+//                         <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+//                             <i className="bi bi-pinterest mx-2 text-light"></i>
+//                         </a>
+//                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+//                             <i className="bi bi-linkedin mx-2 text-light"></i>
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default MegaMenu;
 
 
 
