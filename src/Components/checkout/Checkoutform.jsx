@@ -83,7 +83,7 @@ const Checkoutform = () => {
                 <h2 className="headings mb-2" style={{ fontSize: 'medium' }}>Shipping method</h2>
                 <div className="mb-4 d-flex justify-content-between align-items-center" style={{ fontSize: '0.9rem', border: '1px solid black', borderRadius: '5px', height: '50px', paddingLeft: '10px', paddingRight: '10px', background: '#F6F6F6' }}>
                   <span className="text-muted">Standard</span>
-                  <span style={{ fontWeight: '600' }}>Rs 3000.00</span>
+                  <span style={{ fontWeight: '600' }}>Rs. 3000.00</span>
                 </div>
 
                 {/* Payment Section */}
@@ -180,19 +180,19 @@ const Checkoutform = () => {
             {/* Order Items */}
             <div className="d-flex justify-content-between mb-2">
               <p className="paragraphs mb-0">Subtotal</p>
-              <p className="mb-0 paragraphs">Rs {cart.cartTotalAmount}.00</p>
+              <p className="mb-0 paragraphs">Rs. {cart.cartTotalAmount}.00</p>
             </div>
             <div className="d-flex justify-content-between mb-4">
               <p className="paragraphs mb-0">Shipping</p>
-              <p className="mb-0 paragraphs">Rs 3000.00</p>
+              <p className="mb-0 paragraphs">Rs. 3000.00</p>
             </div>
             <div className="d-flex justify-content-between mb-4">
               <h4 className="paragraphs">Total</h4>
-              <h4 className="paragraphs">Rs {cart.cartTotalAmount + 3000}.00</h4>
+              <h4 className="paragraphs">Rs. {cart.cartTotalAmount + 3000}.00</h4>
             </div>
             <button className="btn w-100 py-2 mb-3" style={{color: '#eff0f5',
                 backgroundColor: '#84754E'}}>Place Order</button>
-            <Link to="/cart" className="text-muted paragraphs text-center d-block"><button className="btn w-100 py-2 mb-3" style={{color: '#eff0f5',
+            <Link to="/MyCart" className="text-muted paragraphs text-center d-block"><button className="btn w-100 py-2 mb-3" style={{color: '#eff0f5',
                backgroundColor: '#84754E'}}>Return to cart</button></Link>
           </div>
         </div>

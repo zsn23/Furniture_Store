@@ -67,7 +67,7 @@ const navigate = useNavigate();
 
           {/* Price */}
           <div>
-            <h5 className="product-price"> Rs {product.price}</h5>
+            <h5 className="product-price"> Rs. {product.price}.00</h5>
           </div>
 
           {/* Colors */}
