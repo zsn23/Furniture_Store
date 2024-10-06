@@ -1115,6 +1115,25 @@ input.searchInput {
 /*-------------------Mega Menu Lamp ends-----------------------*/
 
 /*Card Filter*/
+@media (max-width: 750px) {
+  .filter_btn {
+    display: block; /* Show the button on smaller screens */
+  }
+}
+@media (max-width: 761px) {
+  .availability-filter,
+  .price-filter,
+  .sort-by-filter {
+    display: none !important;
+  }
+}
+
+@media (min-width: 761px) {
+  .filter_btn {
+    display: none !important; /* Hide the button on larger screens */
+  }
+}
+
 .filter_btn {
   border: none !important;
 }
