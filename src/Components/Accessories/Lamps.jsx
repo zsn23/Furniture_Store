@@ -115,6 +115,157 @@ const Lamps = () => {
         </Link>
       </p>
       <h1 className="fontStyling mt-4">Lamps</h1>
+      <div className="d-flex align-items-center justify-content-between mt-5 flex-wrap" style={{ position: 'relative', overflow: 'hidden' }}>
+      <div className="d-flex align-items-center mb-2">
+  <p className="m-0 p-0 text-muted me-2 sort-by-filter">Filter: </p>
+  <p
+    className="m-0 p-0 underline_Availabilty text-muted me-3 availability-filter"
+    onClick={toggleFilterCard}
+    style={{ cursor: "pointer" }}
+  >
+    Availability <i className="bi bi-caret-down-fill caret"></i>
+  </p>
+  <p
+    className="m-0 p-0 underline_Availabilty text-muted price-filter"
+    style={{ cursor: "pointer" }}
+    onClick={togglePrice}
+  >
+    Price <i className="bi bi-caret-down-fill caret"></i>
+  </p>
+</div>
+
+
+<div className="d-flex align-items-center sort-by-filter">
+  <p className="p-0 m-0 text-muted me-2">Sort by:</p>
+  <select
+    className="form-select custom_input text-muted"
+    value={sortOption}
+    onChange={handleSortChange}
+    style={{ width: '180px' }}
+  >
+ <option value="best-selling" selected>
+                      Best selling
+                    </option>
+                    <option value="Alphabetically-AZ">
+                      Alphabetically, A-Z
+                    </option>
+                    <option value="Alphabetically-ZA">
+                      Alphabetically, Z-A
+                    </option>
+                    <option value="Price-low-to-high">
+                      Price, low to high
+                    </option>
+                    <option value="Price-high-to-low">
+                      Price, high to low
+                    </option>
+  </select>
+</div>
+
+      </div>
+      {showFilter && (
+                  <div
+                    ref={filterRef}
+                    className="card mt-3 border-black"
+                    style={{ width: "300px" }}
+                  >
+                    <div className="card-body p-3">
+                      <div className="d-flex justify-content-between align-items-center">
+                        <p className="card-title m-0 text-muted">
+                          {selectedCount} selected
+                        </p>
+                        <button
+                          className="btn p-0 underline_Availabilty text-muted"
+                          onClick={resetFilters}
+                          style={{
+                            color: "black",
+                            border: "none",
+                            background: "none",
+                          }}
+                        >
+                          Reset
+                        </button>
+                      </div>
+                      <hr
+                        style={{ border: "1px solid black", width: "100%" }}
+                      />
+                      <div className="form-check mt-2">
+                        <input
+                          type="checkbox"
+                          className="form-check-input custom_input"
+                          checked={inStock}
+                          onChange={() => setInStock(!inStock)}
+                        />
+                        <label className="form-check-label text-muted">
+                          In stock (9)
+                        </label>
+                      </div>
+                      <div className="form-check">
+                        <input
+                          type="checkbox"
+                          className="form-check-input custom_input"
+                          checked={outOfStock}
+                          onChange={() => setOutOfStock(!outOfStock)}
+                        />
+                        <label className="form-check-label text-muted">
+                          Out of stock (2)
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {showPrice && (
+                  <div
+                    ref={priceRef}
+                    className="card mt-3 border-black"
+                    style={{ width: "325px" }}
+                  >
+                    <div className="card-body p-3">
+                      <div className="d-flex justify-content-between align-items-center">
+                        <p className="card-title m-0 text-muted me-5">
+                          <span>The highest price is Rs.{highestPrice}</span>
+                        </p>
+                        <button
+                          className="btn p-0 underline_Availabilty text-muted"
+                          onClick={resetPrice}
+                          style={{
+                            color: "black",
+                            border: "none",
+                            background: "none",
+                          }}
+                        >
+                          Reset
+                        </button>
+                      </div>
+                      <hr
+                        style={{ border: "1px solid black", width: "100%" }}
+                      />
+                      <div style={{ display: "flex", gap: "20px" }}>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <span className="me-1">Rs</span>
+                          <input
+                            type="number"
+                            placeholder="From"
+                            value={fromPrice}
+                            onChange={(e) => setFromPrice(e.target.value)}
+                            style={inputStyle}
+                          />
+                        </div>
+
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                          <span className="me-1">Rs</span>
+                          <input
+                            type="number"
+                            placeholder="To"
+                            value={toPrice}
+                            onChange={(e) => setToPrice(e.target.value)}
+                            style={inputStyle}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
       <div className="row filter_row">
         <div className="col-6 filter_col">
@@ -210,8 +361,8 @@ const Lamps = () => {
                     className="card mt-3 border-black"
                     style={{ width: "300px" }}
                   >
-                    <div className="card-body p-3">
-                      <div className="d-flex justify-content-between align-items-center">
+                    <div className="card-body p-3  ">
+                      <div className="d-flex justify-content-between align-items-center ">
                         <p className="card-title m-0 text-muted">
                           {selectedCount} selected
                         </p>
@@ -320,7 +471,7 @@ const Lamps = () => {
                   </div>
                 )}
               </div>
-              <div className="filter-item  mx-3">
+              {/* <div className="filter-item  mx-3">
                 <a className="m-0 p-0  " style={{ cursor: "pointer" }}>
                   <span className="underline_Availabilty">Sort by:</span>
                   <select
@@ -347,7 +498,7 @@ const Lamps = () => {
                     </option>
                   </select>
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Filter footer */}
@@ -445,7 +596,7 @@ const Lamps = () => {
                 </button>
               </li>
             ))}
-            <li
+            <li 
               className={`page-item ${
                 currentPage === totalPages ? "disabled" : ""
               }`}
@@ -467,6 +618,7 @@ const Lamps = () => {
 export default Lamps;
 
 /*-----------------------------------------------Page Lamp Card zindex code------------------------------
+
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import LampPic from "../Picture/LampImage.jpg";
