@@ -1115,27 +1115,27 @@ input.searchInput {
 /*-------------------Mega Menu Lamp ends-----------------------*/
 
 /*Card Filter*/
-@media (max-width: 750px) {
-  .filter_btn {
-    display: block; /* Show the button on smaller screens */
-  }
-}
-@media (max-width: 761px) {
-  .availability-filter,
-  .price-filter,
-  .sort-by-filter {
-    display: none !important;
-  }
-}
-
-@media (min-width: 761px) {
-  .filter_btn {
-    display: none !important; /* Hide the button on larger screens */
-  }
+/* @media (min-width : '993px') {
+.filterSetting{
+margin-right: -30% !important;
+}  
+} */
+ .svgHandle{
+  margin-bottom: -63% !important;
+ }
+ .customHeight {
+  height: 13%;
 }
 
+/* Style for screens between 320px and 780px */
+@media (max-width: 1440px) and (min-width: 320px) {
+  .customHeight {
+    height: 17.9%;
+  }
+}
 .filter_btn {
   border: none !important;
+  font-weight:400 !important
 }
 .offcanvas-header h5 {
   margin: 0;
@@ -1341,15 +1341,4 @@ input.searchInput {
 .removeAll:hover {
   text-decoration: underline;
 }
-@media (max-width: 523px) {
-  .filter_btn {
-    width: auto;
-    white-space: nowrap;
 
-  }
-
-  .underline_Availabilty {
-    font-size: 14px; 
-    padding: 0 5px;
-  }
-}
