@@ -11,8 +11,8 @@ const Home = () => {
     <>
       <Carousals />
       <CategoryCarousal/>
-      <Video/>
       <ProductsInCarousel />
+      <Video/>
       <Reviews/>
       <ServicesFeatures/>
     </>

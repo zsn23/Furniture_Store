@@ -115,15 +115,15 @@ const Lamps = () => {
         </Link>
       </p>
       <h1 className="fontStyling mt-4">Lamps</h1>
-      <div className="d-flex align-items-center justify-content-between mt-5 flex-wrap" style={{ position: 'relative', overflow: 'hidden' }}>
-      <div className="d-flex align-items-center mb-2">
+      {/* <div className="d-flex align-items-center justify-content-between mt-5 flex-wrap" style={{ position: 'relative', overflow: 'hidden' }}> */}
+      {/* <div className="d-flex align-items-center mb-2">
   <p className="m-0 p-0 text-muted me-2 sort-by-filter">Filter: </p>
   <p
     className="m-0 p-0 underline_Availabilty text-muted me-3 availability-filter"
     onClick={toggleFilterCard}
     style={{ cursor: "pointer" }}
   >
-    Availability <i className="bi bi-caret-down-fill caret"></i>
+    Availability {" "}<i className="bi bi-caret-down-fill caret"></i>
   </p>
   <p
     className="m-0 p-0 underline_Availabilty text-muted price-filter"
@@ -132,10 +132,10 @@ const Lamps = () => {
   >
     Price <i className="bi bi-caret-down-fill caret"></i>
   </p>
-</div>
+</div> */}
 
 
-<div className="d-flex align-items-center sort-by-filter">
+<div className="d-flex align-items-center justify-content-end sort-by-filter">
   <p className="p-0 m-0 text-muted me-2">Sort by:</p>
   <select
     className="form-select custom_input text-muted"
@@ -161,15 +161,16 @@ const Lamps = () => {
   </select>
 </div>
 
-      </div>
-      {showFilter && (
+      {/* </div> */}
+      {/* {showFilter && (
                   <div
                     ref={filterRef}
                     className="card mt-3 border-black"
                     style={{ width: "300px" }}
+                    
                   >
-                    <div className="card-body p-3">
-                      <div className="d-flex justify-content-between align-items-center">
+                    <div className="card-body p-3  ">
+                      <div className="d-flex justify-content-between align-items-center ">
                         <p className="card-title m-0 text-muted">
                           {selectedCount} selected
                         </p>
@@ -265,40 +266,40 @@ const Lamps = () => {
                       </div>
                     </div>
                   </div>
-                )}
+                )} */}
 
       <div className="row filter_row">
-        <div className="col-6 filter_col">
+        <div className="col-12 filter_col">
           <button
-            className="btn filter_btn  "
+            className="btn filter_btn svgsetting "
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
           >
+          
             <svg
-              className="mx-5 mt-0"
+              className="svgHandle"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
+              viewBox="19 01 39 18"
               fill="none"
-              style={{ width: "100%", height: "20px", outlineColor: "#FFFFFF" }}
+              style={{ width: "100%", height: "20px", outlineColor: "#FFFFFF"}}
             >
               <path
                 fillRule="evenodd"
                 d="M4.833 6.5a1.667 1.667 0 1 1 3.334 0 1.667 1.667 0 0 1-3.334 0ZM4.05 7H2.5a.5.5 0 0 1 0-1h1.55a2.5 2.5 0 0 1 4.9 0h8.55a.5.5 0 0 1 0 1H8.95a2.5 2.5 0 0 1-4.9 0Zm11.117 6.5a1.667 1.667 0 1 0-3.334 0 1.667 1.667 0 0 0 3.334 0ZM13.5 11a2.5 2.5 0 0 1 2.45 2h1.55a.5.5 0 0 1 0 1h-1.55a2.5 2.5 0 0 1-4.9 0H2.5a.5.5 0 0 1 0-1h8.55a2.5 2.5 0 0 1 2.45-2Z"
                 fill="currentColor"
+                
               />
             </svg>
-          </button>
-          <span
-            className="btn filter_btn underline_Availabilty m-0 p-0"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
+            <span
+            className="btn filter_btn underline_Availabilty m-0 p-0 "
+            
           >
-            Filter and sort
+            Filter
           </span>
+          </button>
+     
 
           {/* Filter offcanvas */}
           <div
@@ -310,8 +311,8 @@ const Lamps = () => {
           >
             {/* Filter heading */}
             <div
-              className="offcanvas-header p-0 pb-2 border-bottom"
-              style={{ height: "16%" }}
+              className="offcanvas-header p-0 pb-2 border-bottom customHeight"
+              
             >
               <div>
                 <h5
@@ -498,7 +499,7 @@ const Lamps = () => {
                     </option>
                   </select>
                 </a>
-              </div> */}
+              </div>  */}
             </div>
 
             {/* Filter footer */}
