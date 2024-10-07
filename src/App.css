@@ -425,6 +425,21 @@ input.searchInput {
   height: auto;
 } */
 
+/* Default card styling */
+.card_2 {
+  width: 100%; /* Set full width by default */
+  max-width: 250px; /* Control maximum width */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .card_2 {
+    width: 100%;
+    max-width: 350px; /* Adjust width for smaller screens */
+    margin: 0 auto; /* Center the card */
+  }
+}
+
 
 
 
