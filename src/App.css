@@ -425,34 +425,25 @@ input.searchInput {
   height: auto;
 } */
 
-/* Adjusted Card Styling */
+
+
+
+
+
+/* ProductCarousel.css */
 .card_ {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-  height: 150px; /* Reduced height */
-  width: 90%; /* Ensure it adjusts within column */
+  width: 100%; /* Make cards full width */
+  max-width: 300px; /* Set max width to keep them narrow */
+  transition: transform 0.3s ease;
+
 }
 
-.card_:hover {
-  transform: scale(1.05);
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.card-img-top_ {
-  object-fit: repeat;
-  height: 350px; /* Reduced image height */
-  width: 90%; /* Full width */
-}
 
-.card-body_ {
-  padding: 10px; /* Slight padding for content */
-}
 
-.carousel-control-prev-icon____2,
-.carousel-control-next-icon____2 {
-  background-color: #000;
-  border-radius: 50%;
-}
 
 
 
