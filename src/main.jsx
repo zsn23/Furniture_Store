@@ -12,7 +12,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { LanguageProvider } from './Pages/LanguageContext.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <BrowserRouter>
       <LanguageProvider>
         <Provider store={store}>
@@ -20,5 +19,5 @@ createRoot(document.getElementById('root')).render(
         </Provider>
       </LanguageProvider>
     </BrowserRouter>
-  </StrictMode>
+ 
 );

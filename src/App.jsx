@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home'
 import Footer from './Components/Footer/Footer'
 import TopNavbar from './Components/Nabar/TopNavbar'
@@ -22,8 +22,11 @@ import Cart from './Components/Cart/Cart'
 import Checkoutform from './Components/checkout/Checkoutform'
 import EmailPreferences from './Components/Footer/EmailPreferences'
 import Lamps from './Components/Accessories/Lamps'
-
-
+import Sofas from './Components/Furniture/Sofas';
+import Beds from './Components/Furniture/Beds';
+import Vases from './Components/Furniture/Vases';
+import Rugs from './Components/Furniture/Rugs';
+import Table from './Components/Furniture/Table';
 const App = () => {
   return (
     <>
@@ -42,16 +45,13 @@ const App = () => {
         <Route path="/product/:id" element={<ProductDetail/>} />
         <Route path="/MyCart" element={<Cart/>} />
         <Route path="/checkoutform" element={<Checkoutform/>} />
-        {/* <Route path="/furniture" element={<Furniture />} />
-        <Route path="/furniture/sofas" element={<Sofas />} />
+        <Route path="/furniture/sofas" element={<Sofas />} /> 
         <Route path="/furniture/beds" element={<Beds />} />
-        <Route path="/furniture/tables" element={<Tables />} />
-        <Route path="/accessories" element={<Accessories />} />
-        <Route path="/accessories/lamps" element={<Lamps />} />
+        <Route path="/furniture/tables" element={<Table />} />
+     
         <Route path="/accessories/vases" element={<Vases />} />
         <Route path="/accessories/rugs" element={<Rugs />} />
-        <Route path="/stockists" element={<Stockists />} />
-        <Route path="/about-us" element={<AboutUs />} /> */}
+      
         <Route path='/email-preferences' element={<EmailPreferences/>}/>
         <Route path='/accessories/lamps' element={<Lamps/>}/>
     </Routes>
